@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 public class StartingActivity extends Activity {
-    private final int SPLASH_DISPLAY_LENGTH = 5000;
+    private final int SPLASH_DISPLAY_LENGTH = 2500;
 
 
     @Override
