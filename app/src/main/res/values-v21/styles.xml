@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">#ac1c1c</item>
+        <item name="android:navigationBarColor">#ac1c1c</item>
+    </style>
+</resources>
