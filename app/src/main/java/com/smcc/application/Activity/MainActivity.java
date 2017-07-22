@@ -1,13 +1,15 @@
-package com.smcc.application;
+package com.smcc.application.Activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class LoginTypes extends Activity {
+import com.smcc.application.R;
+
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_types);
+        setContentView(R.layout.activity_main);
     }
 }

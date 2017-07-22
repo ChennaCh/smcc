@@ -1,9 +1,12 @@
-package com.smcc.application;
+package com.smcc.application.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.smcc.application.UserLogins.LoginTypes;
+import com.smcc.application.R;
 
 public class StartingActivity extends Activity {
     private final int SPLASH_DISPLAY_LENGTH = 2500;
