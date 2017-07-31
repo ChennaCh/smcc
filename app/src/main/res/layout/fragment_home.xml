@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/homell"
+    tools:context="com.smcc.application.Fragments.Home">
+    <LinearLayout
+        android:id="@+id/innerhomell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/hviewpager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true" />
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/hindicator"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/hviewpager"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/hscrollText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#e53c38"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:lines="1"
+        android:textColor="#fff"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:padding="4dp"
+        android:scrollHorizontally="true"
+        android:text="Welcome To SMCC and get the latest updates about College" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e53c38"
+        android:layout_weight="3"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/aboutus"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roung_bgbtn"
+                android:drawablePadding="5dp"
+                android:text="About us"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/placements"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:textColor="#fff"
+                android:background="@drawable/roung_bgbtn"
+                android:drawablePadding="5dp"
+                android:text="Placements"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="13dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/facilities"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/roung_bgbtn"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="13dp"
+                android:drawablePadding="5dp"
+                android:text="Facilities"
+                android:textColor="#fff"
+                android:textAllCaps="false"
+                android:textAlignment="center" />
+            <Button
+                android:id="@+id/feedback"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/roung_bgbtn"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:drawablePadding="5dp"
+                android:text="Feedback"
+                android:textColor="#fff"
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/academics"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roung_bgbtn"
+                android:drawablePadding="5dp"
+                android:text="Academics"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/gallery"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/roung_bgbtn"
+                android:drawablePadding="5dp"
+                android:text="Gallery"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -42,7 +42,7 @@ public class LoginTypes extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent guestintent = new Intent(LoginTypes.this, Guest.class);
+                Intent guestintent = new Intent(LoginTypes.this, WelcomeGuest.class);
                 startActivity(guestintent);
             }
         });

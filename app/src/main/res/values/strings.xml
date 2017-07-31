@@ -1,3 +1,92 @@
 <resources>
     <string name="app_name">SMCC</string>
+    <string name="title_activity_welcome_guest">WelcomeGuest</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_Acadamics_fragment">Hello Acadamics fragment</string>
+    <string name="hello_Facilities_fragment">Hello Facilities fragment</string>
+    <string name="hello_Feedback_fragment">Hello Feedback fragment</string>
+    <string name="hello_Gallery_fragment">Hello Gallery fragment</string>
+    <string name="hello_Placements_fragment">Hello placements fragment</string>
+
+    <string name="about_text">
+  <![CDATA[
+    Vision
+
+To be a globally renowned university.
+
+Mission : To impart quality higher education and to undertake research and extension with emphasis on application and innovation that cater to the emerging societal needs through all-round development of students of all sections enabling them to be globally competitive and socially responsible citizens with intrinsic values.
+
+Objectives :
+
+1.Academics:
+To offer academic flexibility by means of Choice based credit systems and the like.
+To identify and introduce new specializations and offer programs in emerging areas therein
+To incorporate into the curriculum the Application orientation and use high standards of competence for academic delivery
+To design and implement educational system adhering to outcome based International models.
+To introduce and implement innovation in teaching  and learning process to strengthen academic delivery
+To offer academic programs at UG, PG, doctoral, Post-Doctoral which are industry focused, and incorporates Trans-discipline, inter-discipline aspects of the education system
+To deliver higher education that includes technologies and meeting the global requirements
+2.Research:
+To promote inter-disciplinary studies and create needful facilities that enhance inter-disciplinary research and innovation
+To create an ambience that is conducive  for undertaking sponsored research, internal funded research and offering consultancy services to wide spectrum of originations
+To establish centers of excellence in frontier areas of research, and design innovation centers with industry collaboration
+To create environment to innovate and incubate the products and services that addresses the societal requirements
+To integrate research  into all academic programs
+To maintain high standards in achieving research outcomes
+To promote International conferences / Seminars / Workshops / in collaboration with professional bodies for creation of avenues for research exchange
+3.Extramural and extension:
+To generate means and avenues for carrying out extramural research for Industry and Academia
+To organize extension activities covering literacy promotion, health awareness and improve the living standards of community
+To make the research outcomes useful and applicable for the societal needs
+4.Infrastructure:
+To promote and maintain state of the art facilities for academic delivery, research and co & extra-curricular facilities and develop congenial and eco-friendly fully residential campus
+To create and strengthen focused and modern infrastructure  that address the national needs through generation of dedicated funds from Industry, Government  and research organizations,
+5.Equity / Access:
+To provide and promote the opportunities to higher education to socially deprived communities and remove disparities by promoting women, differently abled and socially deprived
+To provide equal access to meritorious both in terms of admissions and financial support
+6.ICT:
+To lay emphasis on effective usage of ICT, WEB –resources and train the faculty on the latest advancements thereof and develop effective e-content
+To develop and maintain world class ICT infrastructure and lay emphasis on its effective usage, extend regular training to both faculty and students on its latest advancements there by ensure interactive academic delivery
+7.Examinations and evaluations:
+To introduce reforms in the examination and evaluation system that brings out knowledge application skills and competencies of the students and ensure transparency
+8.Ecology and Environment:
+To Build into curriculum, issues related to social awareness about ecology and environment towards achieving greener society
+9.Linkages:
+To promote collaborations with international and national organizations for advancements of academics, research, Technology transfer and Intellectual property rights.
+To Indigenize the global technological  solutions and develop the products, and services that transforms the standard of living of rural India
+Design new products and services that address commercially attractive needs and opportunities while leveraging the available resources in the form of un-employed and under-employed Individuals
+10.Employability:
+To provide skills through curriculum and training that are essential in fostering entrepreneurial thoughts, employability prospects and at the same time provides necessary support for incubating the innovations and assisting them for prospective commercialization.
+To provide necessary business infrastructure that allows attracting and sustaining the industry to commence their business establishments within the University Campus and aid in life long sustenance of employment.
+To develop industrial cluster that helps the students to start their industry after incubating the products at the incubating centers which will create Jobs
+To develop National depositories for meeting the goals of National skill development council
+Train people to profile neighborhood  and communities for the needs and commercial opportunities that will support financially sustainable new businesses
+11.Governance:
+To institute measures for transparent administration that aid in improving efficiency, accountability and reliance
+To comply with regulations of all the statutory bodies.
+To install professional managers who are global visionaries, thought leaders, and thinkers into the management of the University so as to contribute to the ideals of the University system
+12.Quality:
+To continuously upgrade the faculty in curriculum design, teaching pedagogy, usage of ICT and various processes pertaining to academics, research and University administration
+To develop mechanism that attracts talented, qualified and experienced faculty from across the globe for pursuing their academic and research careers at the University.
+To consider and implement norms, metrics, standards, procedures  and benchmarks for assessing and improving the quality in every aspect of University system and achieve quality certifications by National and International bodies.
+To establish Internal quality Assurance cell (IQAC) and install a quality systems that is integral part of all the University processes
+To continuously upkeep overall quality of the University based on aspects of regular feedback from the stake holders
+To improve the quality of faculty through faculty incentives, awards and recognitions
+13.Value orientation:
+To mold the students to possess professional ethics, moral values and intrapersonal skills that shape them into effective leaders and who are having the thoughts of equality and unanimity towards all walks and sects of life.
+To inculcate the self-consistency, self-reliance and self-learning qualities for shaping the students to lead their life on their own.
+To sharpen the critical thinking and reasoning skills by making students tackle problems and ideas that are yet to be tackled through application of their intellectual discovery.
+Developing the students towards human intellectual achievement and make them rich in cultural experience
+Students to be encouraged and provided with necessary support enabling them to choose and pursue careers of their choice & interest that make them professionally satisfied.
+14.National development:
+To expand the University in all its modes of delivery so as to contribute to the Nation’s increase in Gross Enrolment Ratio
+To align the academic programs and courses to match the requirements of the National goals
+To develop technology that helps sustainable socio economic development]]>
+</string>
 </resources>

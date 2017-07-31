@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/mainll"
+    android:background="#fff"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.smcc.application.UserLogins.WelcomeGuest"
+    tools:showIn="@layout/app_bar_welcome_guest">
+
+   <TextView
+       android:id="@+id/tv1"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:textColor="#ac1c1c"
+       android:layout_gravity="center"
+       android:text="Welcome To SMCC"
+       android:textSize="30dp"/>
+
+</LinearLayout>
+
