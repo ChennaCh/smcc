@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textColor="#fff"
-        android:text="SMCC"
+        android:text="SMEC"
         android:textStyle="italic"
         android:textSize="50dp"
         android:layout_gravity="center"/>

@@ -16,7 +16,6 @@ public class Vision extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vision);
-        TextView tvision=(TextView)findViewById(R.id.tvision);
 
     }
 

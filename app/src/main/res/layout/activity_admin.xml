@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="72dp"
-            android:text="SMCC"
+            android:text="SMEC"
             android:textSize="60dp"
             android:textStyle="italic"
             android:textColor="#fff"

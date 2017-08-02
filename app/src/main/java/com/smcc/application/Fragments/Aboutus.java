@@ -30,9 +30,10 @@ public class Aboutus extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_aboutus, container, false);
         rl =  (RelativeLayout) view.findViewById(R.id.rl);
-        Toolbar toolbar = (Toolbar)view.findViewById(R.id.toolbar);
-        //((ActionBarActivity) getActivity()).getSupportActionBar().setTitle("About us");
-        //activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
+//        Toolbar toolbar = (Toolbar)view.findViewById(R.id.toolbar);
+//        toolbar.setTitle("About us");
+//        ((ActionBarActivity) getActivity()).getSupportActionBar().setTitle("About us");
+//        activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
 
         rl.setOnClickListener(new View.OnClickListener() {
             @Override

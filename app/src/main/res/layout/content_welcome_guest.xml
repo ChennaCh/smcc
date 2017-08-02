@@ -17,7 +17,7 @@
        android:layout_height="match_parent"
        android:textColor="#ac1c1c"
        android:layout_gravity="center"
-       android:text="Welcome To SMCC"
+       android:text="Welcome To SMEC"
        android:textSize="30dp"/>
 
 </LinearLayout>

@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/studentlogo"
+        android:icon="@drawable/smcclogo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -36,7 +36,8 @@
         <activity
             android:name=".UserLogins.WelcomeFaculty"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Activity.Vision"></activity>
+        <activity android:name=".Activity.Vision"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

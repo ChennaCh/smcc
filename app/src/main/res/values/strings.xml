@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">SMCC</string>
+    <string name="app_name">SMEC</string>
     <string name="title_activity_welcome_guest">WelcomeGuest</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_home">Home</string>
+    <string name="action_shareit">ShareIt</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_Acadamics_fragment">Hello Acadamics fragment</string>

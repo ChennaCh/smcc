@@ -78,6 +78,8 @@ public class Home extends Fragment {
                 Fragment mFrag = new Aboutus();
                 t.replace(R.id.mainll, mFrag);
                 t.commit();
+                t.addToBackStack(Home.this.toString());
+
             }
         });
         acadamics.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +89,8 @@ public class Home extends Fragment {
                 Fragment mFrag = new Acadamics();
                 t.replace(R.id.mainll, mFrag);
                 t.commit();
+                t.addToBackStack(Home.this.toString());
+
             }
         });
         facilities.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +100,8 @@ public class Home extends Fragment {
                 Fragment mFrag = new Facilities();
                 t.replace(R.id.mainll, mFrag);
                 t.commit();
+                t.addToBackStack(Home.this.toString());
+
             }
         });
         feedback.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +111,8 @@ public class Home extends Fragment {
                 Fragment mFrag = new Feedback();
                 t.replace(R.id.mainll, mFrag);
                 t.commit();
+                t.addToBackStack(Home.this.toString());
+
             }
         });
         placements.setOnClickListener(new View.OnClickListener() {
@@ -114,6 +122,8 @@ public class Home extends Fragment {
                 Fragment mFrag = new Placements();
                 t.replace(R.id.mainll, mFrag);
                 t.commit();
+                t.addToBackStack(Home.this.toString());
+
             }
         });
         gallery.setOnClickListener(new View.OnClickListener() {
@@ -123,6 +133,8 @@ public class Home extends Fragment {
                 Fragment mFrag = new Gallery();
                 t.replace(R.id.mainll, mFrag);
                 t.commit();
+                t.addToBackStack(Home.this.toString());
+
             }
         });
 
