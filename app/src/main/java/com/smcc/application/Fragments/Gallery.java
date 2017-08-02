@@ -13,8 +13,6 @@ import com.smcc.application.R;
  * A simple {@link Fragment} subclass.
  */
 public class Gallery extends Fragment {
-
-
     public Gallery() {
         // Required empty public constructor
     }

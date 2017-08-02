@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="#fff"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
@@ -8,6 +9,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="#ac1c1c"
-        android:textSize="10dp" />
+        android:text="Vision:
+
+To be a globally renowned university.
+
+Mission :
+
+To impart quality higher education and to undertake research and extension with emphasis on application and innovation that cater to the emerging societal needs through all-round development of students of all sections enabling them to be globally competitive and socially responsible citizens with intrinsic values.
+
+Objectives
+Academics:
+To offer academic flexibility by means of Choice based credit systems and the like.
+To identify and introduce new specializations and offer programs in emerging areas therein
+To incorporate into the curriculum the Application orientation and use high standards of competence for academic delivery
+To design and implement educational system adhering to outcome based International models.
+To introduce and implement innovation in teaching  and learning process to strengthen academic delivery
+To offer academic programs at UG, PG, doctoral, Post-Doctoral which are industry focused, and incorporates Trans-discipline, inter-discipline aspects of the education system
+To deliver higher education that includes technologies and meeting the global requirements
+Research :
+To promote inter-disciplinary studies and create needful facilities that enhance inter-disciplinary research and innovation
+To create an ambience that is conducive  for undertaking sponsored research, internal funded research and offering consultancy services to wide spectrum of originations
+To establish centers of excellence in frontier areas of research, and design innovation centers with industry collaboration
+To create environment to innovate and incubate the products and services that addresses the societal requirements
+To integrate research  into all academic programs
+To maintain high standards in achieving research outcomes
+To promote International conferences / Seminars / Workshops / in collaboration with professional bodies for creation of avenues for research exchange"
+
+        android:textSize="15dp" />
 
 </LinearLayout>

@@ -37,7 +37,7 @@ public class Home extends Fragment {
     Handler handler;
     Aboutus af;
     Vision vision;
-    Button aboutus;
+    Button aboutus,acadamics,facilities,feedback,gallery,placements;
     //FragmentManager fragmentManager = getSupportFragmentManager();
     android.support.v4.app.FragmentTransaction Ftransaction;
     private static int currentPage = 0;
@@ -60,6 +60,11 @@ public class Home extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         gscrollText = (TextView)view.findViewById(R.id.hscrollText);
         aboutus=(Button)view.findViewById(R.id.aboutus);
+        facilities=(Button)view.findViewById(R.id.facilities);
+        acadamics=(Button)view.findViewById(R.id.academics);
+        feedback=(Button)view.findViewById(R.id.feedback);
+        gallery=(Button)view.findViewById(R.id.gallery);
+        placements=(Button)view.findViewById(R.id.placements);
 
         //String datascrolltext= (String)gscrollText.getText();
         gscrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
@@ -69,24 +74,62 @@ public class Home extends Fragment {
         aboutus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-//                getFragmentManager()
-//                        .beginTransaction()
-//                        .replace(R.id.innerhomell, new Aboutus())
-//                        .commit();
-                //LinearLayout ll=(LinearLayout)view.findViewById(R.id.mainll);
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Aboutus();
                 t.replace(R.id.mainll, mFrag);
                 t.commit();
-
-
+            }
+        });
+        acadamics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction t = getFragmentManager().beginTransaction();
+                Fragment mFrag = new Acadamics();
+                t.replace(R.id.mainll, mFrag);
+                t.commit();
+            }
+        });
+        facilities.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction t = getFragmentManager().beginTransaction();
+                Fragment mFrag = new Facilities();
+                t.replace(R.id.mainll, mFrag);
+                t.commit();
+            }
+        });
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction t = getFragmentManager().beginTransaction();
+                Fragment mFrag = new Feedback();
+                t.replace(R.id.mainll, mFrag);
+                t.commit();
+            }
+        });
+        placements.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction t = getFragmentManager().beginTransaction();
+                Fragment mFrag = new Placements();
+                t.replace(R.id.mainll, mFrag);
+                t.commit();
+            }
+        });
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction t = getFragmentManager().beginTransaction();
+                Fragment mFrag = new Gallery();
+                t.replace(R.id.mainll, mFrag);
+                t.commit();
             }
         });
 
         return view;
 
     }
+
 
     private void init() {
 
