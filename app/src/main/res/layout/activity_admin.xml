@@ -6,6 +6,20 @@
     android:background="#e53c38"
     android:fitsSystemWindows="true">
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/admin_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -33,7 +47,8 @@
             android:layout_marginTop="8dp"
             app:hintTextAppearance="@android:style/TextAppearance.Medium"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_email"
+            <EditText
+                android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColorHint="#CFB7B7"
@@ -85,5 +100,14 @@
             android:textColor="#CFB7B7"
             android:textSize="16dip"/>
 
+        <TextView
+            android:id="@+id/settext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#e9d312"
+            android:text=""/>
+
     </LinearLayout>
+    </RelativeLayout>
 </ScrollView>

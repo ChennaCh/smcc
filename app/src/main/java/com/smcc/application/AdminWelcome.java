@@ -1,6 +1,9 @@
 package com.smcc.application;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
@@ -8,6 +11,8 @@ import android.text.TextUtils;
 import android.widget.TextView;
 
 import com.smcc.application.Adapters.SlideimageAdapter;
+import com.smcc.application.UserLogins.Admin;
+import com.smcc.application.UserLogins.LoginTypes;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -17,6 +22,7 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class AdminWelcome extends Activity {
    ViewPager viewPager;
+    String username;
     private static int currentPage = 0;
 //    private static int numPages = 0;
    // int[] img;
@@ -32,9 +38,12 @@ public class AdminWelcome extends Activity {
         setContentView(R.layout.activity_admin_welcome);
         scrollText = (TextView)findViewById(R.id.adminscrollText);
        // String datascrolltext= (String)scrollText.getText();
+        Bundle b = getIntent().getExtras();
+        username = b.getString("uname");
+
         scrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         scrollText.setSingleLine(true);
-       scrollText.setSelected(true);
+        scrollText.setSelected(true);
         init();
     }
 
@@ -64,6 +73,27 @@ public class AdminWelcome extends Activity {
                 handler.post(Update);
             }
         }, 2500, 2500);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        new AlertDialog.Builder(this)
+                .setIcon(R.drawable.alerticon)
+                .setTitle("Logout")
+                .setMessage("Are you sure you want to LogOut !!")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent adminintent = new Intent(AdminWelcome.this, Admin.class);
+                        startActivity(adminintent);
+                    }
+
+                })
+
+                .setNegativeButton("No", null)
+                .show();
     }
 
 }

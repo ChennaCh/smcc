@@ -56,8 +56,6 @@ public class LoginTypes extends Activity {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
 
-        Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
-
 //        finish();
     }
 }
