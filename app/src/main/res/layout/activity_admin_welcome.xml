@@ -44,95 +44,93 @@
         android:text="Welcome To SMEC and get the latest updates about College" />
 
     <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#e53c38"
-                android:layout_weight="3"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/addFaculty"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/roung_bgbtn"
-                        android:drawablePadding="5dp"
-                        android:text="Add       Faculty"
-                        android:textAlignment="center"
-                        android:textAllCaps="false"
-                        android:textColor="#fff"
-                        android:textSize="13dp" />
-
-                    <Button
-                        android:id="@+id/changepwd"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="50dp"
-                        android:background="@drawable/roung_bgbtn"
-                        android:drawablePadding="5dp"
-                        android:text="Change Password"
-                        android:textAlignment="center"
-                        android:textAllCaps="false"
-                        android:textColor="#fff"
-                        android:textSize="13dp" />
-
-
-                </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/viewFaculty"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/roung_bgbtn"
-                    android:drawablePadding="5dp"
-                    android:text="View      Faculty"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
-                    android:textSize="13dp" />
-
-                <Button
-            android:id="@+id/adminfeedback"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/roung_bgbtn"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:drawablePadding="5dp"
-            android:text="View   Feedback"
-        android:textColor="#fff"
-            android:textSize="13dp"
-            android:textAllCaps="false"
-            android:textAlignment="center" />
-
-                </LinearLayout>
-        <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
+        android:background="#e53c38"
+        android:layout_weight="3"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
-        android:orientation="vertical">
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/addFaculty"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roung_bgbtn"
+                android:drawablePadding="5dp"
+                android:text="Add       Faculty"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/changepwd"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/roung_bgbtn"
+                android:drawablePadding="5dp"
+                android:text="Change Password"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/viewFaculty"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roung_bgbtn"
+                android:drawablePadding="5dp"
+                android:text="View      Faculty"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/adminfeedback"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/roung_bgbtn"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:drawablePadding="5dp"
+                android:text="View   Feedback"
+                android:textColor="#fff"
+                android:textSize="13dp"
+                android:textAllCaps="false"
+                android:textAlignment="center"  />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/postNews"
@@ -149,7 +147,7 @@
                 android:textSize="13dp" />
 
             <Button
-                android:id="@+id/Logout"
+                android:id="@+id/admin_logout"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"

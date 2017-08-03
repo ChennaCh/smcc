@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.smcc.application.Adapters.SlideimageAdapter;
@@ -24,8 +26,7 @@ public class AdminWelcome extends Activity {
    ViewPager viewPager;
     String username;
     private static int currentPage = 0;
-//    private static int numPages = 0;
-   // int[] img;
+    Button logoutbtn;
     Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
     //SlideimageAdapter adapter;
     TextView scrollText;
@@ -40,6 +41,30 @@ public class AdminWelcome extends Activity {
        // String datascrolltext= (String)scrollText.getText();
         Bundle b = getIntent().getExtras();
         username = b.getString("uname");
+
+        logoutbtn = (Button)findViewById(R.id.admin_logout);
+
+        logoutbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(AdminWelcome.this)
+                        .setIcon(R.drawable.alerticon)
+                        .setTitle("Logout")
+                        .setMessage("Are you sure you want to LogOut !!")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent adminintent = new Intent(AdminWelcome.this, Admin.class);
+                                startActivity(adminintent);
+                            }
+
+                        })
+
+                        .setNegativeButton("No", null)
+                        .show();
+            }
+        });
 
         scrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         scrollText.setSingleLine(true);
@@ -78,7 +103,7 @@ public class AdminWelcome extends Activity {
     @Override
     public void onBackPressed() {
 
-        new AlertDialog.Builder(this)
+        new AlertDialog.Builder(AdminWelcome.this)
                 .setIcon(R.drawable.alerticon)
                 .setTitle("Logout")
                 .setMessage("Are you sure you want to LogOut !!")
