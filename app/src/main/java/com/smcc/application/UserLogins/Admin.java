@@ -130,6 +130,10 @@ public class Admin extends Activity {
                 textView.setText("Invalid Username and Password");
             }
         }
-
+    }
+    @Override
+    public void onBackPressed() {
+        Intent inte = new Intent(Admin.this,LoginTypes.class);
+        startActivity(inte);
     }
 }
