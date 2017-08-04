@@ -14,6 +14,15 @@
         <item name="android:textColor">@color/colorPrimary</item>
     </style>`
 
+    <style name="StatusTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">#243038</item>
+    </style>
+    <style name="GetFacultyTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+    </style>
+
     <style name="MyEditTextTheme">
         <!-- Used for the bottom line when not selected / focused -->
         <item name="colorControlNormal">#fff</item>

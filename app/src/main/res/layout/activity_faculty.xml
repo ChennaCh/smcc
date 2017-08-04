@@ -1,89 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#e53c38"
     android:fitsSystemWindows="true">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:paddingTop="56dp"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp">
+        android:gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="72dp"
-            android:text="SMEC"
-            android:textSize="60dp"
-            android:textStyle="italic"
-            android:textColor="#fff"
-            android:layout_marginBottom="24dp"
-            android:layout_gravity="center_horizontal" />
-
-        <!-- Email Label -->
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/facultynuname"
+        <ProgressBar
+            android:id="@+id/admin_progress"
+            style="?android:attr/progressBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium"
-            android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/finput_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="#CFB7B7"
-                android:textColor="#fff"
-                app:backgroundTint="#fff"
-                android:inputType="textEmailAddress"
-                android:hint="Email" />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_marginTop="200dp"
+            android:visibility="gone"/>
 
-        <!-- Password Label -->
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/facultypwd"
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium"
-            android:layout_marginBottom="8dp">
+            android:layout_gravity="center"
+            android:paddingTop="56dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
 
-            <EditText
-                android:id="@+id/finput_password"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="72dp"
+                android:text="Faculty"
+                android:textSize="60dp"
+                android:textStyle="italic"
+                android:textColor="#fff"
+                android:layout_marginBottom="24dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/faculty_settext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
-                android:textColor="#fff"
-                android:inputType="textPassword"
-                android:textColorHint="#CFB7B7" />
-        </android.support.design.widget.TextInputLayout>
+                android:textAlignment="center"
+                android:textColor="#e9d312"
+                android:text=""/>
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/fbtn_login"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
-            android:gravity="center"
-            android:textAllCaps="true"
-            android:textColor="#FFF"
-            android:background="#CC1D1D"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:text="Login"/>
+            <!-- Email Label -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/adminuname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                android:layout_marginBottom="8dp">
+                <EditText
+                    android:id="@+id/faculty_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#CFB7B7"
+                    android:textColor="#fff"
+                    app:backgroundTint="#fff"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email" />
+            </android.support.design.widget.TextInputLayout>
 
-        <TextView android:id="@+id/flink_forgot"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Forgot Password? Create one"
-            android:gravity="center"
-            android:textColor="#CFB7B7"
-            android:textSize="16dip"/>
+            <!-- Password Label -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/adminpwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                android:layout_marginBottom="8dp">
 
-    </LinearLayout>
-</ScrollView>
+                <EditText
+                    android:id="@+id/faculty_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:textColor="#fff"
+                    android:inputType="textPassword"
+                    android:textColorHint="#CFB7B7" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/faculty_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="#FFF"
+                android:background="#CC1D1D"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:text="Login"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

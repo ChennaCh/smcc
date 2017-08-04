@@ -96,7 +96,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/viewFaculty"
+                android:id="@+id/view_Faculty"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"

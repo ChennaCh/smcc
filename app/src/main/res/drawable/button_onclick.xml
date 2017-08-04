@@ -12,7 +12,7 @@
         android:type="linear"
         />
     <stroke
-        android:width="3dp"
+        android:width="1dp"
         android:color="#ac1c1c"
         />
     </shape>

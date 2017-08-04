@@ -15,8 +15,6 @@
         android:layout_gravity="center"
         android:gravity="center">
 
-
-
     <ProgressBar
         android:id="@+id/admin_progress"
         style="?android:attr/progressBarStyle"
@@ -38,19 +36,27 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="72dp"
-            android:text="SMEC"
+            android:text="Admin"
             android:textSize="60dp"
             android:textStyle="italic"
             android:textColor="#fff"
             android:layout_marginBottom="24dp"
             android:layout_gravity="center_horizontal" />
 
+        <TextView
+            android:id="@+id/settext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#e9d312"
+            android:text=""/>
+
         <!-- Email Label -->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/adminuname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             app:hintTextAppearance="@android:style/TextAppearance.Medium"
             android:layout_marginBottom="8dp">
             <EditText
@@ -96,23 +102,6 @@
             android:textStyle="bold"
             android:padding="10dp"
             android:text="Login"/>
-
-        <TextView android:id="@+id/link_signup"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Forgot Password? Create one"
-            android:gravity="center"
-            android:textColor="#CFB7B7"
-            android:textSize="16dip"/>
-
-        <TextView
-            android:id="@+id/settext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textColor="#e9d312"
-            android:text=""/>
 
     </LinearLayout>
     </RelativeLayout>

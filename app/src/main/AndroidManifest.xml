@@ -21,7 +21,7 @@
         </activity>
         <activity
             android:name=".UserLogins.LoginTypes"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/StatusTheme" />
         <activity
             android:name=".UserLogins.Admin"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -43,7 +43,10 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Activity.AddFacultyActivty"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/StatusTheme" />
+        <activity
+            android:name=".Activity.ViewFacultyActivity"
+            android:theme="@style/GetFacultyTheme"/>
     </application>
 
 </manifest>

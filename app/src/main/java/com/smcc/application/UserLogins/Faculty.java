@@ -18,11 +18,7 @@ TextInputLayout facultyuname,facultypwd;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faculty);
-        facultyuname = (TextInputLayout) findViewById(R.id.facultynuname);
-        facultypwd = (TextInputLayout) findViewById(R.id.facultypwd);
-        finputpwd=(EditText)findViewById(R.id.finput_password);
-        finputuname=(EditText)findViewById(R.id.finput_email);
-        facultylogin=(Button)findViewById(R.id.fbtn_login);
+        facultylogin=(Button)findViewById(R.id.faculty_login);
         facultylogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

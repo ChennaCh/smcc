@@ -55,12 +55,12 @@ public class Admin extends Activity {
             @Override
             public void onClick(View view) {
                 textView.setText("");
-                new GetContacts().execute();
+                new GetContacts1().execute();
             }
         });
     }
 
-    private class GetContacts extends AsyncTask<Void,Void,Integer> {
+    private class GetContacts1 extends AsyncTask<Void,Void,Integer> {
 
         @Override
         protected void onPreExecute() {

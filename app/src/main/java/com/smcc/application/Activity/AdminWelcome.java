@@ -26,7 +26,7 @@ public class AdminWelcome extends Activity {
    ViewPager viewPager;
     String username;
     private static int currentPage = 0;
-    Button logoutbtn,addfacultybtn;
+    Button logoutbtn,addfacultybtn,viewfacultybtn;
     Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
     //SlideimageAdapter adapter;
     TextView scrollText;
@@ -44,6 +44,15 @@ public class AdminWelcome extends Activity {
 
         logoutbtn = (Button)findViewById(R.id.admin_logout);
         addfacultybtn = (Button)findViewById(R.id.admin_addFaculty);
+        viewfacultybtn = (Button) findViewById(R.id.view_Faculty);
+
+        viewfacultybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent addfacultyintent = new Intent(AdminWelcome.this,ViewFacultyActivity.class);
+                startActivity(addfacultyintent);
+            }
+        });
 
         addfacultybtn.setOnClickListener(new View.OnClickListener() {
             @Override
