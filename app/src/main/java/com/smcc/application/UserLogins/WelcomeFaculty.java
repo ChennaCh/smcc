@@ -8,7 +8,6 @@ import android.text.TextUtils;
 import android.widget.TextView;
 
 import com.smcc.application.Adapters.SlideimageAdapter;
-import com.smcc.application.AdminWelcome;
 import com.smcc.application.R;
 
 import java.util.ArrayList;

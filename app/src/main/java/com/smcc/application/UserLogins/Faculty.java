@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.smcc.application.AdminWelcome;
 import com.smcc.application.R;
 
 public class Faculty extends Activity {

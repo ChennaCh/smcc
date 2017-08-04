@@ -1,4 +1,4 @@
-package com.smcc.application;
+package com.smcc.application.Activity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -13,8 +13,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.smcc.application.Adapters.SlideimageAdapter;
+import com.smcc.application.R;
 import com.smcc.application.UserLogins.Admin;
-import com.smcc.application.UserLogins.LoginTypes;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -26,7 +26,7 @@ public class AdminWelcome extends Activity {
    ViewPager viewPager;
     String username;
     private static int currentPage = 0;
-    Button logoutbtn;
+    Button logoutbtn,addfacultybtn;
     Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
     //SlideimageAdapter adapter;
     TextView scrollText;
@@ -43,6 +43,15 @@ public class AdminWelcome extends Activity {
         username = b.getString("uname");
 
         logoutbtn = (Button)findViewById(R.id.admin_logout);
+        addfacultybtn = (Button)findViewById(R.id.admin_addFaculty);
+
+        addfacultybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent addfacultyintent = new Intent(AdminWelcome.this,AddFacultyActivty.class);
+                startActivity(addfacultyintent);
+            }
+        });
 
         logoutbtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -7,7 +7,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -15,7 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.smcc.application.AdminWelcome;
+import com.smcc.application.Activity.AdminWelcome;
 import com.smcc.application.Bean.AdminBean;
 import com.smcc.application.HttpHandler;
 import com.smcc.application.R;
@@ -25,7 +24,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Admin extends Activity {
     private String TAG = Admin.class.getSimpleName();
