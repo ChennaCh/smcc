@@ -76,7 +76,8 @@ public class GetFacultyAdapter extends BaseAdapter {
             holder.qualificaion.setText(adapterItems.get(postion).getGqualification());
         }
         if (adapterItems.get(postion).getGgender() != null){
-            if (adapterItems.get(postion).toString().equals("MALE")){
+            String ch= adapterItems.get(postion).getGgender().toString();
+            if (ch.equals("MALE") || ch.equals("male")){
                 holder.getimage.setImageResource(R.drawable.men);
             }
             else {
