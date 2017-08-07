@@ -62,7 +62,6 @@ public class GetFacultyAdapter extends BaseAdapter {
         holder.mobile = (TextView) view.findViewById(R.id.facu_mobile);
         holder.qualificaion = (TextView) view.findViewById(R.id.facu_qualification);
         holder.getimage = (ImageView) view.findViewById(R.id.get_image);
-
         if (adapterItems.get(postion).getGname() != null){
             holder.name.setText(adapterItems.get(postion).getGname());
         }

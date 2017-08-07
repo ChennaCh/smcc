@@ -62,7 +62,7 @@ public class Home extends Fragment {
         aboutus=(Button)view.findViewById(R.id.aboutus);
         facilities=(Button)view.findViewById(R.id.facilities);
         acadamics=(Button)view.findViewById(R.id.academics);
-        feedback=(Button)view.findViewById(R.id.feedback);
+        feedback=(Button)view.findViewById(R.id.guestfeedback);
         gallery=(Button)view.findViewById(R.id.gallery);
         placements=(Button)view.findViewById(R.id.placements);
 

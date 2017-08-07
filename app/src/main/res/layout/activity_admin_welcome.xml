@@ -27,139 +27,223 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/adminscrollText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="#e53c38"
-        android:ellipsize="marquee"
-        android:fadingEdge="horizontal"
-        android:lines="1"
-        android:textColor="#fff"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:maxLines="1"
-        android:padding="4dp"
-        android:scrollHorizontally="true"
-        android:text="Welcome To SMEC and get the latest updates about College" />
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/adminscrollText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#e53c38"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:lines="1"
+            android:textColor="#fff"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:layout_marginBottom="5dp"
+            android:scrollHorizontally="true"
+            android:text="Welcome To SMEC and get the latest updates about College" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#e53c38"
-        android:layout_weight="3"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/admin_addFaculty"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/roung_bgbtn"
-                android:drawablePadding="5dp"
-                android:text="Add       Faculty"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="13dp" />
-
-            <Button
-                android:id="@+id/changepwd"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/roung_bgbtn"
-                android:drawablePadding="5dp"
-                android:text="Change Password"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="13dp" />
-        </LinearLayout>
+        android:layout_gravity="center"
+        android:fillViewport="true"
+        >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#e53c38"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:layout_weight="3"
+            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/view_Faculty"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/roung_bgbtn"
-                android:drawablePadding="5dp"
-                android:text="View      Faculty"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="13dp" />
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/adminfeedback"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/roung_bgbtn"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#5d8eac"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <Button
+                        android:id="@+id/admin_addFaculty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/addfaculty" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Add Faculty"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#6eac5d"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <Button
+                        android:id="@+id/changepwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/changepass" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="ChangePass"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:drawablePadding="5dp"
-                android:text="View   Feedback"
-                android:textColor="#fff"
-                android:textSize="13dp"
-                android:textAllCaps="false"
-                android:textAlignment="center"  />
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#c7c25d"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/view_Faculty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/viewfaculty" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="13dp"
+                        android:layout_marginTop="5dp"
+                        android:textAllCaps="true"
+                        android:text="View Faculty"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#c98457"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/adminfeedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/viewfeedback"
+                        android:layout_gravity="center" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="13dp"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="5dp"
+                        android:text="View Feedback"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:background="#6eac5d"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/postNews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/postnews" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="13dp"
+                        android:layout_marginTop="5dp"
+                        android:textAllCaps="true"
+                        android:text="Post News"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="#5d8eac"
+                    android:padding="5dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/admin_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/logout" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:textSize="13dp"
+                        android:layout_marginTop="5dp"
+                        android:textAllCaps="true"
+                        android:text="Logout"/>
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/postNews"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/roung_bgbtn"
-                android:drawablePadding="5dp"
-                android:text="Post           News"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="13dp" />
-
-            <Button
-                android:id="@+id/admin_logout"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/roung_bgbtn"
-                android:drawablePadding="5dp"
-                android:text="Logout"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="13dp" />
-        </LinearLayout>
-
-        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

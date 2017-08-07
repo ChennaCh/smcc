@@ -6,10 +6,11 @@ package com.smcc.application.Bean;
 
 public class GetFacultyBean {
 
-    String gname,gpassword,gmobile,gemail,gbranch,ggender,gqualification,gabout;
+    String id,gname,gpassword,gmobile,gemail,gbranch,ggender,gqualification,gabout;
 
-    public GetFacultyBean(String gtname, String gtpassword, String gtmobile, String gtemail,
+    public GetFacultyBean(String gid, String gtname, String gtpassword, String gtmobile, String gtemail,
                           String gtbranch, String gtgender, String gtqualification, String gtabount){
+        this.id = gid;
         this.gname = gtname;
         this.gpassword = gtpassword;
         this.gmobile = gtmobile;
@@ -18,6 +19,14 @@ public class GetFacultyBean {
         this.ggender = gtgender;
         this.gqualification = gtqualification;
         this.gabout = gtabount;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getGbranch() {

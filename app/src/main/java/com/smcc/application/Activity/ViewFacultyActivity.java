@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -31,6 +33,7 @@ public class ViewFacultyActivity extends Activity {
     private ProgressBar viewprogress;
     private Activity activity;
     private ArrayList<GetFacultyBean> adapterItems = new ArrayList<GetFacultyBean>();
+    private ImageView dleteimage;
 
     private static String url = "http://www.fratelloinnotech.com/smec/getfaculty.php";
 
@@ -42,6 +45,7 @@ public class ViewFacultyActivity extends Activity {
         setContentView(R.layout.activity_view_faculty);
 
         list = (ListView) findViewById(R.id.view_list);
+        dleteimage = (ImageView) findViewById(R.id.faculty_delete);
         viewprogress = (ProgressBar) findViewById(R.id.viewfaculty_progress);
         viewprogress.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
         new GetContacts().execute();
@@ -71,6 +75,7 @@ public class ViewFacultyActivity extends Activity {
 
                     for (int i = 0; i < contacts.length(); i++) {
                         JSONObject c = contacts.getJSONObject(i);
+                        String id = c.getString("id");
                         String name = c.getString("name");
                         String pass = c.getString("password");
                         String phone = c.getString("mobile");
@@ -81,7 +86,7 @@ public class ViewFacultyActivity extends Activity {
                         String about = c.getString("about");
 
 //                        validation(name,pass);
-                        adapterItems.add(new GetFacultyBean(name,pass,phone,email,branch,gender,qualification,about));
+                        adapterItems.add(new GetFacultyBean(id,name,pass,phone,email,branch,gender,qualification,about));
                     }
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
@@ -109,6 +114,19 @@ public class ViewFacultyActivity extends Activity {
             if (getFacultyBeen != null){
                 GetFacultyAdapter adater1 = new GetFacultyAdapter(ViewFacultyActivity.this,getFacultyBeen);
                 list.setAdapter(adater1);
+                list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, final int position, long l) {
+                        Toast.makeText(ViewFacultyActivity.this, "Toast "+position, Toast.LENGTH_SHORT).show();
+
+//                        dleteimage.setOnClickListener(new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View view) {
+//                                Toast.makeText(ViewFacultyActivity.this, "deleting "+position, Toast.LENGTH_SHORT).show();
+//                            }
+//                        });
+                    }
+                });
             } else {
 
                 Toast.makeText(activity, "Not able to fetch data from server, please check url.", Toast.LENGTH_SHORT).show();
