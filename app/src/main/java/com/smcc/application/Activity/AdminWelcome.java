@@ -4,17 +4,27 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.smcc.application.Adapters.SlideimageAdapter;
+import com.smcc.application.Bean.GetFacultyBean;
+import com.smcc.application.HttpHandler;
 import com.smcc.application.R;
 import com.smcc.application.UserLogins.Admin;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -23,21 +33,25 @@ import java.util.TimerTask;
 import me.relex.circleindicator.CircleIndicator;
 
 public class AdminWelcome extends Activity {
+
+    private String TAG = AdminWelcome.class.getSimpleName();
+
    ViewPager viewPager;
     String username;
     private static int currentPage = 0;
-    Button logoutbtn,addfacultybtn,viewfacultybtn;
+    Button logoutbtn,addfacultybtn,viewfacultybtn,postnews;
     Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
     //SlideimageAdapter adapter;
     TextView scrollText;
     ArrayList<Integer> COLLEGEArray = new ArrayList<Integer>();
 
+    private static String getnewsurl = "http://www.fratelloinnotech.com/smec/getnews.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_welcome);
-        scrollText = (TextView)findViewById(R.id.adminscrollText);
+        scrollText = (TextView)findViewById(R.id.admin_scrollText);
        // String datascrolltext= (String)scrollText.getText();
         Bundle b = getIntent().getExtras();
         username = b.getString("uname");
@@ -45,6 +59,15 @@ public class AdminWelcome extends Activity {
         logoutbtn = (Button)findViewById(R.id.admin_logout);
         addfacultybtn = (Button)findViewById(R.id.admin_addFaculty);
         viewfacultybtn = (Button) findViewById(R.id.view_Faculty);
+        postnews= (Button) findViewById(R.id.postNews);
+
+        postnews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent postnewsintent = new Intent(AdminWelcome.this,PostNews.class);
+                startActivity(postnewsintent);
+            }
+        });
 
         viewfacultybtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +111,7 @@ public class AdminWelcome extends Activity {
         scrollText.setSingleLine(true);
         scrollText.setSelected(true);
         init();
+        new GetNews().execute();
     }
 
     private void init() {
@@ -139,4 +163,49 @@ public class AdminWelcome extends Activity {
                 .show();
     }
 
+    private class GetNews extends AsyncTask<Void,Void,ArrayList<GetFacultyBean>> {
+
+        @Override
+        protected ArrayList<GetFacultyBean> doInBackground(Void... voids) {
+            HttpHandler sh = new HttpHandler();
+
+            // Making a request to url and getting response
+            String jsonStr = sh.makeServiceCall(getnewsurl);
+            Log.e(TAG, "Response from url: " + jsonStr);
+
+            if (jsonStr != null) {
+                try {
+                    JSONObject jsonObj = new JSONObject(jsonStr);
+                    JSONArray contacts = jsonObj.getJSONArray("result");
+
+                    for (int i = 0; i < contacts.length(); i++) {
+                        JSONObject c = contacts.getJSONObject(i);
+                        String id = c.getString("id");
+                        String news = c.getString("news");
+                        String date = c.getString("pdate");
+
+                        if (id.equals("16")){
+//                            Toast.makeText(AdminWelcome.this, "Data"+news, Toast.LENGTH_SHORT).show();
+                            scrollText.setText(news);
+//                            scrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+                        }
+
+
+                    }
+                } catch (final JSONException e) {
+                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(AdminWelcome.this, "Json parsing error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
+            } else {
+                Toast.makeText(getApplicationContext(), "Couldn't get json from server", Toast.LENGTH_SHORT).show();
+            }
+
+            return null;
+        }
+    }
 }
