@@ -1,6 +1,8 @@
 package com.smcc.application.Fragments;
 
 
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -9,17 +11,26 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.smcc.application.Activity.GuestFeedback;
 import com.smcc.application.Activity.Vision;
 import com.smcc.application.Adapters.SlideimageAdapter;
+import com.smcc.application.Bean.GetFacultyBean;
+import com.smcc.application.HttpHandler;
 import com.smcc.application.R;
 import com.smcc.application.UserLogins.WelcomeGuest;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -43,9 +54,12 @@ public class Home extends Fragment {
     private static int currentPage = 0;
 
     Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
-    TextView gscrollText;
+    TextView gscrollText ;
     ArrayList<Integer> COLLEGEArray = new ArrayList<Integer>();
     View view;
+    private static String getnewsurl2 = "http://www.fratelloinnotech.com/smec/getnews.php";
+    private String TAG = Home.class.getSimpleName();
+
 
     public Home() {
         // Required empty public constructor
@@ -62,9 +76,10 @@ public class Home extends Fragment {
         aboutus=(Button)view.findViewById(R.id.aboutus);
         facilities=(Button)view.findViewById(R.id.facilities);
         acadamics=(Button)view.findViewById(R.id.academics);
-        feedback=(Button)view.findViewById(R.id.guestfeedback);
+        feedback=(Button)view.findViewById(R.id.guest_feedback);
         gallery=(Button)view.findViewById(R.id.gallery);
         placements=(Button)view.findViewById(R.id.placements);
+
 
         //String datascrolltext= (String)gscrollText.getText();
         gscrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
@@ -107,11 +122,8 @@ public class Home extends Fragment {
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentTransaction t = getFragmentManager().beginTransaction();
-                Fragment mFrag = new Feedback();
-                t.replace(R.id.mainll, mFrag);
-                t.commit();
-                t.addToBackStack(Home.this.toString());
+                Intent feedbackintent = new Intent(getContext(), GuestFeedback.class);
+                startActivity(feedbackintent);
 
             }
         });
@@ -137,6 +149,7 @@ public class Home extends Fragment {
 
             }
         });
+        new GetNewsGuest().execute();
 
         return view;
 
@@ -171,5 +184,51 @@ public class Home extends Fragment {
             }
         }, 2500, 2500);
         handler.post(Update);
+    }
+
+    private class GetNewsGuest extends AsyncTask<Void,Void,Void> {
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            HttpHandler sh = new HttpHandler();
+
+            // Making a request to url and getting response
+            String jsonStr = sh.makeServiceCall(getnewsurl2);
+            Log.e(TAG, "Response from url: " + jsonStr);
+
+            if (jsonStr != null) {
+                try {
+                    JSONObject jsonObj = new JSONObject(jsonStr);
+                    JSONArray contacts = jsonObj.getJSONArray("result");
+                    String allnews="";
+                    for (int i = 0; i < contacts.length(); i++) {
+                        JSONObject c = contacts.getJSONObject(i);
+                        String id = c.getString("id");
+                        String news = c.getString("news");
+                        String date1value = c.getString("pdate");
+                        allnews+=news;
+
+
+                    }
+                    try {
+                        gscrollText.setText(allnews);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                } catch (final JSONException e) {
+                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(getActivity(), "Json parsing error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
+            } else {
+                Toast.makeText(getActivity(), "Couldn't get json from server", Toast.LENGTH_SHORT).show();
+            }
+
+            return null;
+        }
     }
 }

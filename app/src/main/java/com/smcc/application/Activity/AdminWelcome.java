@@ -39,7 +39,7 @@ public class AdminWelcome extends Activity {
    ViewPager viewPager;
     String username;
     private static int currentPage = 0;
-    Button logoutbtn,addfacultybtn,viewfacultybtn,postnews;
+    Button logoutbtn,addfacultybtn,viewfacultybtn,postnews,changepwd;
     Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
     //SlideimageAdapter adapter;
     TextView scrollText;
@@ -60,6 +60,15 @@ public class AdminWelcome extends Activity {
         addfacultybtn = (Button)findViewById(R.id.admin_addFaculty);
         viewfacultybtn = (Button) findViewById(R.id.view_Faculty);
         postnews= (Button) findViewById(R.id.postNews);
+        changepwd = (Button) findViewById(R.id.changepwd);
+
+        changepwd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent chagepassintent = new Intent(AdminWelcome.this,ChangePassword.class);
+                startActivity(chagepassintent);
+            }
+        });
 
         postnews.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -184,10 +193,9 @@ public class AdminWelcome extends Activity {
                         String news = c.getString("news");
                         String date = c.getString("pdate");
 
-                        if (id.equals("16")){
-//                            Toast.makeText(AdminWelcome.this, "Data"+news, Toast.LENGTH_SHORT).show();
+                        if (id.equals("21")){
+
                             scrollText.setText(news);
-//                            scrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
                         }
 
 

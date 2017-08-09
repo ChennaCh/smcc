@@ -3,6 +3,7 @@ package com.smcc.application.UserLogins;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -55,6 +56,13 @@ public class Admin extends Activity {
             @Override
             public void onClick(View view) {
                 textView.setText("");
+                SharedPreferences preferences = getSharedPreferences("userdetails",MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                String usernmae = inputuname.getText().toString();
+                String pass = inputpwd.getText().toString();
+                editor.putString("username",usernmae);
+                editor.putString("password",pass);
+                editor.commit();
                 new GetContacts1().execute();
             }
         });

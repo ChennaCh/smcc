@@ -39,11 +39,18 @@ public class PostNews extends Activity {
         result = (TextView) findViewById(R.id.news_result);
         postbtn = (Button) findViewById(R.id.post_button);
 
+        postnews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                    result.setText("");
+            }
+        });
+
         postbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getnews = postnews.getText().toString();
-
                 insertToPostnews(getnews);
             }
         });
@@ -52,9 +59,9 @@ public class PostNews extends Activity {
 
     private void insertToPostnews(final String getnews) {
 
-        class SendNewsReqAsyncTask extends AsyncTask<Object, Object, String> {
+        class SendNewsReqAsyncTask extends AsyncTask<Object, Object, Void> {
             @Override
-            protected String doInBackground(Object... strings) {
+            protected Void doInBackground(Object... strings) {
                 List<NameValuePair> nameNewsPairs = new ArrayList<NameValuePair>();
                 nameNewsPairs.add(new BasicNameValuePair("news", getnews));
 
@@ -63,13 +70,19 @@ public class PostNews extends Activity {
                     HttpPost httpPost = new HttpPost("http://www.fratelloinnotech.com/smec/addnews.php");
                     httpPost.setEntity(new UrlEncodedFormEntity(nameNewsPairs));
                     HttpResponse response = httpClient.execute(httpPost);
-                    Toast.makeText(getApplicationContext(),response.toString(),Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getApplicationContext(),response.toString(),Toast.LENGTH_LONG).show();
                     HttpEntity entity = response.getEntity();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                super.onPostExecute(aVoid);
                 result.setText(" News Added Succefully ");
-                return "Success";
+                postnews.setText("");
             }
         }
         SendNewsReqAsyncTask sendPostReqAsyncTask = new SendNewsReqAsyncTask();

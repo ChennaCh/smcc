@@ -117,16 +117,43 @@ public class AddFacultyActivty extends Activity {
                 getqualification = qualificationspinner.getSelectedItem().toString();
                 aboutfaculty = about.getText().toString();
 
-                insertToDatabase(getname, getpass, getphone, getemail, gettype, gendertype,aboutfaculty);
+                String emailPattern1 = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+
+                if (getname.equals("")){
+                    username.requestFocus();
+                    username.setError("Please Enter UserName");
+
+                }else if (getpass.equals("")){
+                    password.requestFocus();
+                    password.setError("Please Enter Password");
+
+                }else if (getphone.length()< 10){
+                    phone.requestFocus();
+                    phone.setError("Enter 10 digits Number");
+
+                }
+                else if (!getemail.matches(emailPattern1)){
+                    email.requestFocus();
+                    email.setError("Please Enter UserName");
+
+                }else if (aboutfaculty.equals("")){
+                    about.requestFocus();
+                    about.setError("Please Enter UserName");
+
+                }
+                if (getname.trim().length() > 0 && getpass.trim().length() > 0 && aboutfaculty.trim().length() > 0){
+                    insertToDatabase(getname, getpass, getphone, getemail, gettype, gendertype,aboutfaculty);
+                }
+
             }
         });
     }
 
     private void insertToDatabase(final String getname, final String getpass, final String getphone,
                                   final String getemail, final String gettype, final String gendertype, final String aboutfaculty) {
-        class SendPostReqAsyncTask extends AsyncTask<Object, Object, String> {
+        class SendPostReqAsyncTask extends AsyncTask<Object, Object, Void> {
             @Override
-            protected String doInBackground(Object... strings) {
+            protected Void doInBackground(Object... strings) {
                 List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
                 nameValuePairs.add(new BasicNameValuePair("name", getname));
                 nameValuePairs.add(new BasicNameValuePair("password", getpass));
@@ -143,13 +170,23 @@ public class AddFacultyActivty extends Activity {
                     HttpPost httpPost = new HttpPost("http://www.fratelloinnotech.com/smec/addfaculty.php");
                     httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                     HttpResponse response = httpClient.execute(httpPost);
-                    Toast.makeText(getApplicationContext(),response.toString(),Toast.LENGTH_LONG).show();
                     HttpEntity entity = response.getEntity();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
-                return "Success";
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                super.onPostExecute(aVoid);
+                Toast.makeText(AddFacultyActivty.this, "Faculty Added Successfully", Toast.LENGTH_LONG).show();
+                username.setText("");
+                password.setText("");
+                email.setText("");
+                phone.setText("");
+                about.setText("");
             }
         }
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();

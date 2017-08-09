@@ -10,6 +10,7 @@
     <color name="background_material_dark">#ffffff</color>
     <color name="accent_material_light">#ffffff</color>
     <color name="textColorPrimary">#ffffff</color>
+    <color name="hintcolor">#CFB7B7</color>
 
 
     <color name="white">#ffffff</color>

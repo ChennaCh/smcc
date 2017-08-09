@@ -49,6 +49,12 @@
             android:theme="@style/GetFacultyTheme" />
         <activity
             android:name=".Activity.PostNews"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Activity.ChangePassword"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Activity.GuestFeedback"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 

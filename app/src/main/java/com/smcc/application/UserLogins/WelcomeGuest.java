@@ -1,5 +1,6 @@
 package com.smcc.application.UserLogins;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -16,12 +17,16 @@ import android.text.TextUtils;
 import android.support.design.widget.NavigationView;
 
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.smcc.application.Activity.AdminWelcome;
 import com.smcc.application.Adapters.SlideimageAdapter;
+import com.smcc.application.Bean.GetFacultyBean;
 import com.smcc.application.Fragments.Aboutus;
 import com.smcc.application.Fragments.Acadamics;
 import com.smcc.application.Fragments.Facilities;
@@ -29,7 +34,12 @@ import com.smcc.application.Fragments.Feedback;
 import com.smcc.application.Fragments.Gallery;
 import com.smcc.application.Fragments.Home;
 import com.smcc.application.Fragments.Placements;
+import com.smcc.application.HttpHandler;
 import com.smcc.application.R;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -39,6 +49,7 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class WelcomeGuest extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
    //ViewPager cviewPager;
     public static int navItemIndex = 0;
     private static final String TAG_HOME = "home";
@@ -50,6 +61,8 @@ public class WelcomeGuest extends AppCompatActivity
     private static final String TAG_PLACEMENTS = "placements";
 
     public static String CURRENT_TAG = TAG_HOME;
+
+
 
     // toolbar titles respected to selected nav menu item
     private String[] activityTitles;
@@ -102,7 +115,6 @@ public class WelcomeGuest extends AppCompatActivity
         }
       // initializing navigation menu
       //  setUpNavigationView();
-
 
     }
     private void setToolbarTitle() {

@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:gravity="center"
     android:background="#243038"
     android:orientation="vertical"
     tools:context="com.smcc.application.Activity.AddFacultyActivty">
 
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
         android:gravity="center">
 
         <ProgressBar
@@ -82,10 +83,6 @@
                         android:textAllCaps="true"
                         android:text=" FeMALE"/>
                 </LinearLayout>
-
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="270dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -181,7 +178,7 @@
                     <EditText
                         android:id="@+id/faculty_about"
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
+                        android:layout_height="85dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:background="@drawable/about"
@@ -191,7 +188,7 @@
                         android:textAlignment="center"/>
 
                 </LinearLayout>
-            </ScrollView>
+
 
                 <Button
                     android:id="@+id/faculty_add"
@@ -205,5 +202,6 @@
             </LinearLayout>
         </RelativeLayout>
     </RelativeLayout>
+    </ScrollView>
 
 </LinearLayout>
