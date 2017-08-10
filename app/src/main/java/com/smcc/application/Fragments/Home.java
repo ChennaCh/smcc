@@ -53,7 +53,7 @@ public class Home extends Fragment {
     android.support.v4.app.FragmentTransaction Ftransaction;
     private static int currentPage = 0;
 
-    Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
+    Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.college,R.drawable.auditorium};
     TextView gscrollText ;
     ArrayList<Integer> COLLEGEArray = new ArrayList<Integer>();
     View view;

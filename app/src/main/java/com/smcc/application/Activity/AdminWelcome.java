@@ -39,8 +39,8 @@ public class AdminWelcome extends Activity {
    ViewPager viewPager;
     String username;
     private static int currentPage = 0;
-    Button logoutbtn,addfacultybtn,viewfacultybtn,postnews,changepwd;
-    Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
+    Button logoutbtn,addfacultybtn,viewfacultybtn,postnews,changepwd,feedback;
+    Integer[] COLLEGE1= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
     //SlideimageAdapter adapter;
     TextView scrollText;
     ArrayList<Integer> COLLEGEArray = new ArrayList<Integer>();
@@ -61,6 +61,15 @@ public class AdminWelcome extends Activity {
         viewfacultybtn = (Button) findViewById(R.id.view_Faculty);
         postnews= (Button) findViewById(R.id.postNews);
         changepwd = (Button) findViewById(R.id.changepwd);
+        feedback = (Button) findViewById(R.id.admin_feedback1);
+
+        feedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent feedbackintent = new Intent(AdminWelcome.this,ViewFeedBack.class);
+                startActivity(feedbackintent);
+            }
+        });
 
         changepwd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,8 +133,8 @@ public class AdminWelcome extends Activity {
     }
 
     private void init() {
-        for(int i=0;i<COLLEGE.length;i++)
-            COLLEGEArray.add(COLLEGE[i]);
+        for(int i=0;i<COLLEGE1.length;i++)
+            COLLEGEArray.add(COLLEGE1[i]);
 
         viewPager = (ViewPager)findViewById(R.id.adminvpager);
         viewPager.setAdapter(new SlideimageAdapter(AdminWelcome.this,COLLEGEArray));
@@ -136,7 +145,7 @@ public class AdminWelcome extends Activity {
         final Handler handler = new Handler();
         final Runnable Update = new Runnable() {
             public void run() {
-                if (currentPage == COLLEGE.length) {
+                if (currentPage == COLLEGE1.length) {
                     currentPage = 0;
                 }
                 viewPager.setCurrentItem(currentPage++, true);

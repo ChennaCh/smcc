@@ -95,7 +95,7 @@ public class GuestFeedback extends Activity {
                 namePassPairs.add(new BasicNameValuePair("mobile", gmobile));
                 namePassPairs.add(new BasicNameValuePair("email", gemail));
                 namePassPairs.add(new BasicNameValuePair("branch", feebackbranch));
-                namePassPairs.add(new BasicNameValuePair("password", gfeedback));
+                namePassPairs.add(new BasicNameValuePair("msg", gfeedback));
 
                 try {
                     HttpClient httpClient = new DefaultHttpClient();
