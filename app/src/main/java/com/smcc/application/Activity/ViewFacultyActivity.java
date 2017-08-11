@@ -106,7 +106,7 @@ public class ViewFacultyActivity extends Activity {
         }
 
         @Override
-        protected void onPostExecute(ArrayList<GetFacultyBean> getFacultyBeen) {
+        protected void onPostExecute(final ArrayList<GetFacultyBean> getFacultyBeen) {
             super.onPostExecute(getFacultyBeen);
             viewprogress.setVisibility(View.GONE);
 
@@ -118,13 +118,16 @@ public class ViewFacultyActivity extends Activity {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, final int position, long l) {
                         Toast.makeText(ViewFacultyActivity.this, "Toast "+position, Toast.LENGTH_SHORT).show();
-
-//                        dleteimage.setOnClickListener(new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View view) {
-//                                Toast.makeText(ViewFacultyActivity.this, "deleting "+position, Toast.LENGTH_SHORT).show();
-//                            }
-//                        });
+                        Intent intent = new Intent(ViewFacultyActivity.this,FacultyDetail.class);
+                        GetFacultyBean  b = getFacultyBeen.get(position);
+                        ArrayList<String> values = new ArrayList<String>();
+                        values.add(b.getGname());
+                        values.add(b.getGmobile());
+                        values.add(b.getGbranch());
+                        values.add(b.getGqualification());
+                        values.add(b.getGabout());
+                        intent.putStringArrayListExtra("values",values);
+                        startActivity(intent);
                     }
                 });
             } else {

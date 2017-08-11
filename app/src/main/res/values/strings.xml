@@ -25,4 +25,5 @@
         <item>Feedback</item>
         <item>Gallery</item>
     </string-array>
+    <string name="title_activity_faculty_detail">FacultyDetail</string>
 </resources>

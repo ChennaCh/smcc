@@ -58,7 +58,10 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Activity.ViewFeedBack"
-            android:theme="@style/GetFacultyTheme"/>
+            android:theme="@style/GetFacultyTheme" />
+        <activity
+            android:name=".Activity.FacultyDetail"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>

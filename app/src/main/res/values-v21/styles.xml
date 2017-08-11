@@ -19,6 +19,12 @@
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">#243038</item>
     </style>
+
+    <style name="MyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">true</item>
+        ...
+    </style>
     <style name="GetFacultyTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="android:statusBarColor">@color/colorPrimary</item>
     </style>
