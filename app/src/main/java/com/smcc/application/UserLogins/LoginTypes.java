@@ -15,7 +15,7 @@ public class LoginTypes extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_types);
+        setContentView(R.layout.sample);
 
         adminbtn = (Button) findViewById(R.id.admin);
         facultybtn = (Button) findViewById(R.id.faculty);
