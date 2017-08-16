@@ -126,6 +126,7 @@ public class ViewFacultyActivity extends Activity {
                         values.add(b.getGbranch());
                         values.add(b.getGqualification());
                         values.add(b.getGabout());
+                        values.add(b.getGemail());
                         intent.putStringArrayListExtra("values",values);
                         startActivity(intent);
                     }
