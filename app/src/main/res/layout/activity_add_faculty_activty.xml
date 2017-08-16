@@ -103,8 +103,6 @@
                         android:textColor="@color/black"
                         android:textColorHint="@color/gray_color"
                         android:textCursorDrawable="@null">
-
-                        <requestFocus></requestFocus>
                         </EditText>
 
                     <EditText

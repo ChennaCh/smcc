@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/collasing_toolbar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.smcc.application.Activity.FacultyDetail">
+    android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
@@ -20,79 +18,198 @@
             android:layout_height="match_parent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:fitsSystemWindows="true"
-            app:contentScrim="@color/blue"
+            app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp"
-            app:title="FacultyDetail">
+            app:title="FacultyName">
 
             <ImageView
+                android:id="@+id/toolbarImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scaleType="centerCrop"
                 android:fitsSystemWindows="true"
-                android:src="@drawable/men"
-                app:layout_collapseMode="parallax"/>
+                android:src="@drawable/facultyimage"
+                app:layout_collapseMode="parallax" />
 
             <android.support.v7.widget.Toolbar
-                android:id="@+id/collapsing_toolbar"
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:layout_collapseMode="pin" />
-
-
         </android.support.design.widget.CollapsingToolbarLayout>
-
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
-        android:id="@+id/neste_scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="28sp"
-            android:lineSpacingExtra="8dp"
-            android:padding="10dp"/>
 
-            <TextView
-                android:id="@+id/faculty_branch"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:text="branch"
-                android:lineSpacingExtra="8dp"
-                android:padding="10dp"/>
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/gender_gradient"
+                android:layout_marginTop="10dp">
 
-            <TextView
-                android:id="@+id/faculty_phoneno"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:lineSpacingExtra="8dp"
-                android:text="phoneno"
-                android:padding="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#dacdcd"
+                    android:paddingLeft="10dp"
+                    android:text="Branch"/>
+                <TextView
+                    android:id="@+id/faculty_branch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="-"/>
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/faculty_qualification"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:lineSpacingExtra="8dp"
-                android:text="qualification"
-                android:padding="10dp"/>
-            <TextView
-                android:id="@+id/faculty_msg"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="1.0"
+                android:background="@drawable/gender_gradient"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#dacdcd"
+                    android:paddingLeft="10dp"
+                    android:text="Phone"/>
+                <TextView
+                    android:id="@+id/faculty_phoneno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="2dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="-"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/click_call"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:src="@drawable/phonecall"
+                    android:layout_weight="0.8"/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:lineSpacingExtra="8dp"
-                android:text="about"
-                android:padding="10dp"/>
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@drawable/gender_gradient">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#dacdcd"
+                    android:paddingLeft="10dp"
+                    android:text="Qualification"/>
+                <TextView
+                    android:id="@+id/faculty_qualification"
+                    android:layout_width="match_parent"
+                    android:paddingTop="2dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="-"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="1.0"
+                android:background="@drawable/gender_gradient"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#dacdcd"
+                        android:paddingLeft="10dp"
+                        android:text="Phone"/>
+                    <TextView
+                        android:id="@+id/faculty_mail12"
+                        android:layout_width="match_parent"
+                        android:paddingTop="2dp"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:text="-"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/click_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:src="@drawable/mail"
+                    android:layout_weight="0.8"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@drawable/gender_gradient">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#dacdcd"
+                    android:paddingLeft="10dp"
+                    android:text="About "/>
+                <TextView
+                    android:id="@+id/faculty_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:text="-"/>
+            </LinearLayout>
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
@@ -104,5 +221,4 @@
         android:src="@drawable/ic_menu_camera"
         app:layout_anchor="@id/appBar"
         app:layout_anchorGravity="bottom|end" />
-
 </android.support.design.widget.CoordinatorLayout>

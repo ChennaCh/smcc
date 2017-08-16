@@ -8,6 +8,16 @@
     android:background="#fff"
     tools:context="com.smcc.application.Activity.AdminWelcome">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"   >
@@ -48,13 +58,6 @@
             android:scrollHorizontally="true"
             />
     </LinearLayout>
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -244,5 +247,6 @@
 
             </LinearLayout>
         </LinearLayout>
+    </LinearLayout>
     </ScrollView>
 </LinearLayout>
