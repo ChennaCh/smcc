@@ -149,7 +149,7 @@ public class Home extends Fragment {
 
             }
         });
-        new GetNewsGuest().execute();
+       // new GetNewsGuest().execute();
 
         return view;
 
@@ -186,49 +186,49 @@ public class Home extends Fragment {
         handler.post(Update);
     }
 
-    private class GetNewsGuest extends AsyncTask<Void,Void,Void> {
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            HttpHandler sh = new HttpHandler();
-
-            // Making a request to url and getting response
-            String jsonStr = sh.makeServiceCall(getnewsurl2);
-            Log.e(TAG, "Response from url: " + jsonStr);
-
-            if (jsonStr != null) {
-                try {
-                    JSONObject jsonObj = new JSONObject(jsonStr);
-                    JSONArray contacts = jsonObj.getJSONArray("result");
-                    String allnews="";
-                    for (int i = 0; i < contacts.length(); i++) {
-                        JSONObject c = contacts.getJSONObject(i);
-                        String id = c.getString("id");
-                        String news = c.getString("news");
-                        String date1value = c.getString("pdate");
-                        allnews+=news;
-
-
-                    }
-                    try {
-                        gscrollText.setText(allnews);
-                    }catch (Exception e){
-                        e.printStackTrace();
-                    }
-                } catch (final JSONException e) {
-                    Log.e(TAG, "Json parsing error: " + e.getMessage());
-                    getActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(getActivity(), "Json parsing error: " + e.getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    });
-                }
-            } else {
-                Toast.makeText(getActivity(), "Couldn't get json from server", Toast.LENGTH_SHORT).show();
-            }
-
-            return null;
-        }
-    }
+//    private class GetNewsGuest extends AsyncTask<Void,Void,Void> {
+//
+//        @Override
+//        protected Void doInBackground(Void... voids) {
+//            HttpHandler sh = new HttpHandler();
+//
+//            // Making a request to url and getting response
+//            String jsonStr = sh.makeServiceCall(getnewsurl2);
+//            Log.e(TAG, "Response from url: " + jsonStr);
+//
+//            if (jsonStr != null) {
+//                try {
+//                    JSONObject jsonObj = new JSONObject(jsonStr);
+//                    JSONArray contacts = jsonObj.getJSONArray("result");
+//                    String allnews="";
+//                    for (int i = 0; i < contacts.length(); i++) {
+//                        JSONObject c = contacts.getJSONObject(i);
+//                        String id = c.getString("id");
+//                        String news = c.getString("news");
+//                        String date1value = c.getString("pdate");
+//                        allnews+=news;
+//
+//
+//                    }
+//                    try {
+//                        gscrollText.setText(allnews);
+//                    }catch (Exception e){
+//                        e.printStackTrace();
+//                    }
+//                } catch (final JSONException e) {
+//                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+//                    getActivity().runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            Toast.makeText(getActivity(), "Json parsing error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+//                        }
+//                    });
+//                }
+//            } else {
+//                Toast.makeText(getActivity(), "Couldn't get json from server", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            return null;
+//        }
+//    }
 }
