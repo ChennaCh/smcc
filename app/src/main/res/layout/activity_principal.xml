@@ -5,6 +5,17 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Profile of Principal"
+        android:textColor="#ac1c1a"
+        android:paddingBottom="5dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="150dp"

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context="com.smcc.application.Activity.Management">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="Management"
+    android:textColor="#ac1c1a"
+    android:paddingBottom="5dp"
+    android:textSize="18dp"
+    android:textStyle="bold"
+    />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e7d2d2"
+                android:padding="3dp"
+                android:orientation="horizontal"
+                android:weightSum="3.0">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/chairman" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="Chairman"
+                        android:textColor="#ac1c1c"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="Sri. M. Laxman Reddy"
+                        android:textColor="#282525"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/SplitLine_hor1"
+                android:layout_width="match_parent"
+                android:layout_height= "5dp"
+                android:background="#fff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e7d2d2"
+                android:padding="3dp"
+                android:orientation="horizontal"
+                android:weightSum="3.0">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="Vice Chairman"
+                        android:textColor="#ac1c1c"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="Sri. G. Durgaiah Yadav"
+                        android:textColor="#282525"
+                        android:textSize="13dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/vicechairman" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/SplitLine_hor2"
+                android:layout_width="match_parent"
+                android:layout_height= "5dp"
+                android:background="#fff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e7d2d2"
+                android:padding="3dp"
+                android:orientation="horizontal"
+                android:weightSum="3.0">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/secretary" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="Secretary and Correspondent"
+                        android:textColor="#ac1c1c"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="Sri.Ch.MahendharReddy"
+                        android:textColor="#282525"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/SplitLine_hor3"
+                android:layout_width="match_parent"
+                android:layout_height= "5dp"
+                android:background="#fff" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:orientation="horizontal"
+                android:background="#e7d2d2"
+                android:weightSum="3.0">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:text="Treasurer"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        android:textColor="#ac1c1c"
+                        android:gravity="center"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13dp"
+                        android:text="Sri. G. Narsimha Yadav"
+                        android:textColor="#282525"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1.5">
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/treasurer"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:id="@+id/SplitLine_hor4"
+                android:layout_width="match_parent"
+                android:layout_height= "5dp"
+                android:background="#fff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e7d2d2"
+                android:padding="3dp"
+                android:orientation="horizontal"
+                android:weightSum="3.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1.5"
+                        android:background="@drawable/executivedirector" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="Executive Director"
+                        android:textColor="#ac1c1c"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="Sri. G Chandrasekhar Yadav"
+                        android:textColor="#282525"
+                        android:textSize="13dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -26,4 +26,9 @@
         <item>Gallery</item>
     </string-array>
     <string name="title_activity_faculty_detail">FacultyDetail</string>
+    <string name="title_activity_principal">Profile Of Principal</string>
+    <string name="title_activity_management">Management</string>
+    <string name="title_activity_philosophy">Philosophy</string>
+    <string name="title_activity_admin_hr_policy">Administration HR Policy</string>
+    <string name="title_activity_mou">MOU\'s</string>
 </resources>

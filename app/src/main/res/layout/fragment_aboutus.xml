@@ -38,7 +38,6 @@
                 android:layout_marginBottom="27dp">
 
                 <TextView
-                    android:id="@+id/music"
                     android:layout_width="match_parent"
                     android:gravity="center"
                     android:layout_height="50dp"
@@ -81,7 +80,6 @@
                 android:layout_marginBottom="27dp">
 
                 <TextView
-                    android:id="@+id/music1"
                     android:layout_width="match_parent"
                     android:gravity="center"
                     android:layout_height="50dp"
@@ -142,6 +140,7 @@
         android:id="@+id/card_view4"
         android:layout_gravity="center">
         <RelativeLayout
+            android:id="@+id/rphilosophy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -182,6 +181,7 @@
         android:id="@+id/card_view5"
         android:layout_gravity="center">
     <RelativeLayout
+        android:id="@+id/rhr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -221,6 +221,7 @@
         android:id="@+id/card_view6"
         android:layout_gravity="center">
     <RelativeLayout
+        android:id="@+id/rmou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 

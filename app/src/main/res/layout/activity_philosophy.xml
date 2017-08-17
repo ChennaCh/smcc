@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Philosophy"
+        android:textColor="#ac1c1a"
+        android:paddingBottom="5dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/placem"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="The essence of learning lies in pursuing the truth that liberates one from the darkness of ignorance and St. Martin's Engineering firmly believes that education is for liberation."
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Contained therein is the notion that engineering education includes all fields of science that plays a pivotal role in the development of world-wide community contributing to the progress of civilization. This institute, adhering to the above understanding, is committed to the development of science and technology in congruence with the natural environs. It lays great emphasis on intensive research and education that blends professional skills and high moral standards with a sense of individuality and humanity. We thus promote ties with local communities and encourage transnational interactions in order to be socially accountable. This accelerates the process of transfiguring the students into complete human beings making the learning process relevant to life, instilling in them a sense of courtesy and responsibility."
+                android:textColor="#000000" />
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Don’t compare yourself with anyone in this world. If you compare you are insulting yourself."
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="No one will manufacture a lock without key. Similarly God won`t give problems without solutions."
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Life laughs at you when you are unhappy…. Life smiles at you when you are happy… Life salutes you when you make others happy."
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Every successful person has a painful story. Every painful story has a successful ending. Accept the Pain and get ready for success."
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Easy is to judge the mistakes of others. Difficult is to recognize our own mistakes. It is easier to protect with slippers than to cover the earth with carpet."
+                android:textColor="#000000" /> <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="No one can go back and change a bad beginning; but anyone can start now and create a successful ending."
+            android:textColor="#000000" /> <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="If a problem can be solved, no need to worry about it. If a problem cannot be solved what is the use of worrying?"
+            android:textColor="#000000" /> <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="If you miss an opportunity don`t fill the eyes with tears. It will hide another better opportunity in front of you."
+            android:textColor="#000000" /> <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="“Changing the face” can change nothing. But “Facing the change” can change everything. Don`t complain about other; Change yourself if you want peace."
+            android:textColor="#000000" /> <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Mistakes are painful when they happen. But year`s later collection of mistakes is called experience, which leads to success."
+            android:textColor="#000000" /> <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="The essence of learning lies in pursuing the truth that liberates one from the darkness of ignorance and St. Martin's Engineering firmly believes that education is for liberation."
+            android:textColor="#000000" /> <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Be bold when you loose and be calm when you win. Heated gold becomes ornament. Beaten copper becomes wires."
+            android:textColor="#000000" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
