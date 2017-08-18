@@ -19,7 +19,6 @@ import com.smcc.application.Activity.AdminWelcome;
 import com.smcc.application.Bean.AdminBean;
 import com.smcc.application.HttpHandler;
 import com.smcc.application.R;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -39,7 +38,6 @@ public class Admin extends Activity {
     Button adminLogin;
     String user,passwrd;
     TextView textView;
-
     private static String url = "http://www.fratelloinnotech.com/smec/adminusers.php";
 
     @Override
@@ -90,7 +88,6 @@ public class Admin extends Activity {
                     JSONObject jsonObj = new JSONObject(jsonStr);
                     JSONArray contacts = jsonObj.getJSONArray("result");
                     flag = 0;
-
                     user = inputuname.getText().toString();
                     passwrd = inputpwd.getText().toString();
                     for (int i = 0; i < contacts.length(); i++) {
@@ -114,7 +111,7 @@ public class Admin extends Activity {
                         }
                     });
                 }
-            }
+           }
             else {
                 textView.setText("Invalid Username and Password");
             }

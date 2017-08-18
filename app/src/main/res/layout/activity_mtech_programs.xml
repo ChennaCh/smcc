@@ -1,9 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.smcc.application.Activity.MtechPrograms">
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context="com.smcc.application.Activity.BtechPrograms">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="M.Tech Programs"
+        android:textColor="#ac1c1a"
+        android:paddingBottom="5dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/block"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/table_btechCourses"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableRow
+                    android:id="@+id/table_heading"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text="P.G Courses"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#fff"
+                        android:layout_weight="0.5"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:text="In Take"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/table_data1"
+                    android:layout_width="wrap_content"
+                    android:weightSum="3"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:text="M.Tech: Computer Science and Engineering (I - Shift)"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:text="48"
+                        android:textColor="#000" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/table_data2"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:text="M.Tech: Computer Science and Engineering(II - Shift)"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_data"
+                        android:layout_weight="0.5"
+                        android:textColor="#000"
+                        android:padding="5dp"
+                        android:text="18"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/table_data3"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:text="M.Tech: Embedded Systems(I - Shift)"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:text="36"
+                        android:textColor="#000" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/table_data4"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:text="M.Tech: Embedded Systems(II - Shift)"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_data"
+                        android:layout_weight="0.5"
+                        android:textColor="#000"
+                        android:padding="5dp"
+                        android:text="18"/>
+                </TableRow>
+                <TableRow
+                    android:id="@+id/table_data5"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:text="M.Tech: Power Systems"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:text="18"
+                        android:textColor="#000" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/table_data6"
+                    android:layout_width="match_parent"
+                    android:weightSum="3"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:text="M.Tech: Machine Design"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cell_shape_data"
+                        android:layout_weight="0.5"
+                        android:textColor="#000"
+                        android:padding="5dp"
+                        android:text="18"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -50,24 +50,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:fillViewport="true"
-        >
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#e53c38"
             android:layout_gravity="center"
-            android:gravity="center"
             android:layout_weight="3"
+            android:background="#e53c38"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:gravity="center"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -135,53 +134,58 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:background="#c7c25d"
-                    android:padding="5dp"
-                    android:orientation="vertical">
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
                     <Button
                         android:id="@+id/facilities"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/viewfaculty" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textAlignment="center"
-                        android:textSize="13dp"
                         android:layout_marginTop="5dp"
+                        android:text="faculties"
+                        android:textAlignment="center"
                         android:textAllCaps="true"
-                        android:text="faculties"/>
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:background="#c98457"
-                    android:padding="5dp"
-                    android:orientation="vertical">
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
                     <Button
                         android:id="@+id/guest_feedback"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/viewfeedback"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        android:background="@drawable/viewfeedback" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textAlignment="center"
-                        android:textSize="13dp"
-                        android:textAllCaps="true"
                         android:layout_marginTop="5dp"
-                        android:text="Feedback"/>
+                        android:text="Feedback"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
                 </LinearLayout>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -193,10 +197,11 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="5dp"
                     android:background="#6eac5d"
-                    android:orientation="vertical">
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
                     <Button
                         android:id="@+id/academics"
                         android:layout_width="wrap_content"
@@ -204,39 +209,43 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
                         android:background="@drawable/academics" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textAlignment="center"
-                        android:textSize="13dp"
                         android:layout_marginTop="5dp"
+                        android:text="academics"
+                        android:textAlignment="center"
                         android:textAllCaps="true"
-                        android:text="academics"/>
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:background="#5d8eac"
-                    android:padding="5dp"
-                    android:orientation="vertical">
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
                     <Button
                         android:id="@+id/gallery"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="@drawable/logout" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textAlignment="center"
-                        android:textSize="13dp"
                         android:layout_marginTop="5dp"
+                        android:text="contact us"
+                        android:textAlignment="center"
                         android:textAllCaps="true"
-                        android:text="gallery"/>
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
                 </LinearLayout>
 
             </LinearLayout>

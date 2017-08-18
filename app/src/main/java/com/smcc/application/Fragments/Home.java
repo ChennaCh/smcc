@@ -94,7 +94,6 @@ public class Home extends Fragment {
                 t.replace(R.id.frame, mFrag);
                 t.commit();
                 t.addToBackStack(Home.this.toString());
-
             }
         });
         acadamics.setOnClickListener(new View.OnClickListener() {

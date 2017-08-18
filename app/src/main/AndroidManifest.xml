@@ -101,7 +101,22 @@
             android:label="@string/title_activity_professional_societies" />
         <activity
             android:name=".Activity.Research"
-            android:label="@string/title_activity_research"></activity>
+            android:label="@string/title_activity_research" />
+        <activity
+            android:name=".Activity.PlacementsHome"
+            android:label="@string/title_activity_placements_home" />
+        <activity
+            android:name=".Activity.CampusSelections"
+            android:label="@string/title_activity_campus_selections" />
+        <activity
+            android:name=".Activity.StudentsPlaced"
+            android:label="@string/title_activity_students_placed" />
+        <activity
+            android:name=".Activity.CompaniesVisited"
+            android:label="@string/title_activity_companies_visited" />
+        <activity
+            android:name=".Activity.PlacementsContactUs"
+            android:label="@string/title_activity_placements_contact_us"></activity>
     </application>
 
 </manifest>
