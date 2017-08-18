@@ -78,7 +78,11 @@
             android:label="@string/title_activity_admin_hr_policy" />
         <activity
             android:name=".Activity.Mou"
-            android:label="@string/title_activity_mou"></activity>
+            android:label="@string/title_activity_mou" />
+        <activity
+            android:name=".Activity.FacultyChangePassword"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Activity.FacultyViewFeedback"></activity>
     </application>
 
 </manifest>

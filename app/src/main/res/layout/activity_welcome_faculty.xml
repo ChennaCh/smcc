@@ -42,15 +42,17 @@
         android:layout_height="match_parent"
         android:layout_marginTop="5dp"
         android:layout_gravity="center"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:gravity="center"
         android:background="#e53c38"
         android:orientation="vertical">
 
             <Button
-                android:id="@+id/feedback"
-                android:layout_width="250dp"
+                android:id="@+id/f_feedback"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="50dp"
                 android:background="@drawable/rec_bgbutton"
                 android:drawablePadding="5dp"
                 android:text="View Feedback"
@@ -58,12 +60,27 @@
                 android:textAllCaps="false"
                 android:textColor="#fff"
                 android:textSize="13dp" />
+
         <Button
-            android:id="@+id/facu_logout"
-            android:layout_width="250dp"
+            android:id="@+id/f_changepass"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rec_bgbutton"
+            android:drawablePadding="5dp"
+            android:text="Change Password"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/facu_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:background="@drawable/rec_bgbutton"
             android:drawablePadding="5dp"
             android:text="Logout"

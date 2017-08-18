@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.smcc.application.Activity.AdminWelcome;
+import com.smcc.application.Activity.FacultyChangePassword;
+import com.smcc.application.Activity.FacultyViewFeedback;
+import com.smcc.application.Activity.StartingActivity;
 import com.smcc.application.Adapters.SlideimageAdapter;
 import com.smcc.application.R;
 
@@ -25,7 +28,7 @@ import me.relex.circleindicator.CircleIndicator;
 public class WelcomeFaculty extends Activity {
     ViewPager fviewPager;
     private static int currentPage = 0;
-    Button logout;
+    Button logout,fchangepass,ffeedback;
     Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
     TextView fscrollText;
     ArrayList<Integer> COLLEGEArray = new ArrayList<Integer>();
@@ -40,6 +43,23 @@ public class WelcomeFaculty extends Activity {
         fscrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         fscrollText.setSingleLine(true);
         fscrollText.setSelected(true);
+        fchangepass = (Button) findViewById(R.id.f_changepass);
+        ffeedback = (Button) findViewById(R.id.f_feedback);
+
+        ffeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(WelcomeFaculty.this, FacultyViewFeedback.class));
+            }
+        });
+
+        fchangepass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(WelcomeFaculty.this, FacultyChangePassword.class));
+            }
+        });
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +111,27 @@ public class WelcomeFaculty extends Activity {
                 handler.post(Update);
             }
         }, 2500, 2500);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        new AlertDialog.Builder(WelcomeFaculty.this)
+                .setIcon(R.drawable.alerticon)
+                .setTitle("Logout")
+                .setMessage("Are you sure you want to LogOut !!")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent facultyintent = new Intent(WelcomeFaculty.this, Faculty.class);
+                        startActivity(facultyintent);
+                    }
+
+                })
+
+                .setNegativeButton("No", null)
+                .show();
     }
 
 }
