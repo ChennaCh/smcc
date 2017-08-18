@@ -31,4 +31,10 @@
     <string name="title_activity_philosophy">Philosophy</string>
     <string name="title_activity_admin_hr_policy">Administration HR Policy</string>
     <string name="title_activity_mou">MOU\'s</string>
+    <string name="title_activity_btech_programs">B.Tech Programs</string>
+    <string name="title_activity_mtech_programs">M.Tech Programs</string>
+    <string name="title_activity_board_of_studies">Board of Studies</string>
+    <string name="title_activity_examinations">Examinations</string>
+    <string name="title_activity_professional_societies">Professional Societies</string>
+    <string name="title_activity_research">Research</string>
 </resources>

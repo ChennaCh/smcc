@@ -14,12 +14,6 @@ import com.smcc.application.R;
  */
 public class Feedback extends Fragment {
 
-
-    public Feedback() {
-        // Required empty public constructor
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

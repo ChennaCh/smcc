@@ -83,7 +83,25 @@
             android:name=".Activity.FacultyChangePassword"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".Activity.FacultyViewFeedback" />
-        <activity android:name=".Activity.ViewFacultyGuest"></activity>
+        <activity android:name=".Activity.ViewFacultyGuest" />
+        <activity
+            android:name=".Activity.BtechPrograms"
+            android:label="@string/title_activity_btech_programs" />
+        <activity
+            android:name=".Activity.MtechPrograms"
+            android:label="@string/title_activity_mtech_programs" />
+        <activity
+            android:name=".Activity.BoardOfStudies"
+            android:label="@string/title_activity_board_of_studies" />
+        <activity
+            android:name=".Activity.Examinations"
+            android:label="@string/title_activity_examinations" />
+        <activity
+            android:name=".Activity.ProfessionalSocieties"
+            android:label="@string/title_activity_professional_societies" />
+        <activity
+            android:name=".Activity.Research"
+            android:label="@string/title_activity_research"></activity>
     </application>
 
 </manifest>
