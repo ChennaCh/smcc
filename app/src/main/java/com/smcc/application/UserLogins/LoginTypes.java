@@ -45,6 +45,7 @@ public class LoginTypes extends Activity {
 
                 Intent guestintent = new Intent(LoginTypes.this, WelcomeGuest.class);
                 startActivity(guestintent);
+                Toast.makeText(LoginTypes.this, "kk", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -58,4 +59,6 @@ public class LoginTypes extends Activity {
 
 //        finish();
     }
+
+
 }

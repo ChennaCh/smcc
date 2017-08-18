@@ -154,12 +154,12 @@ public class WelcomeGuest extends AppCompatActivity
                 fragment=getHomeFragment();
                 //hf = (Home) fragment;
                 fragmentManager = getSupportFragmentManager();
-                LinearLayout ll = (LinearLayout)findViewById(R.id.mainll);
-                ll.removeAllViews();
-                fragmentManager.beginTransaction().replace(R.id.mainll, fragment).commit();
                 Ftransaction=fragmentManager.beginTransaction();
+                fragmentManager.beginTransaction().replace(R.id.frame, getHomeFragment());
+                Ftransaction.commitAllowingStateLoss();
+
                // Ftransaction.show(hf);
-                Ftransaction.commit();
+//                Ftransaction.commit();
 
             }
         };
@@ -244,9 +244,7 @@ public class WelcomeGuest extends AppCompatActivity
             fragment = new Home();
             hf = (Home) fragment;
             fragmentManager = getSupportFragmentManager();
-            LinearLayout ll = (LinearLayout)findViewById(R.id.mainll);
-            ll.removeAllViews();
-            fragmentManager.beginTransaction().replace(R.id.mainll, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
             Ftransaction=fragmentManager.beginTransaction();
             Ftransaction.show(hf);
             Ftransaction.commit();
@@ -257,9 +255,9 @@ public class WelcomeGuest extends AppCompatActivity
             fragment = new Aboutus();
             af = (Aboutus) fragment;
             fragmentManager = getSupportFragmentManager();
-            LinearLayout ll = (LinearLayout) findViewById(R.id.mainll);
-            ll.removeAllViews();
-            fragmentManager.beginTransaction().replace(R.id.mainll, fragment).commit();
+//            LinearLayout ll = (LinearLayout) findViewById(R.id.mainll);
+//            ll.removeAllViews();
+            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
             Ftransaction=fragmentManager.beginTransaction();
             Ftransaction.show(af);
            Ftransaction.commit();
@@ -268,12 +266,10 @@ public class WelcomeGuest extends AppCompatActivity
         else if (id == R.id.nav_facilities) {
             navItemIndex = 2;
             CURRENT_TAG = TAG_FACILITIES;
-            fragment = new Facilities();
-            ffacilities = (Facilities) fragment;
+            Fragment fragment1 = new Facilities();
+            ffacilities = (Facilities) fragment1;
             fragmentManager = getSupportFragmentManager();
-            LinearLayout ll = (LinearLayout) findViewById(R.id.mainll);
-            ll.removeAllViews();
-            fragmentManager.beginTransaction().replace(R.id.mainll, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.frame, fragment1).commit();
             Ftransaction=fragmentManager.beginTransaction();
             Ftransaction.show(ffacilities);
             Ftransaction.commit();
@@ -285,9 +281,7 @@ public class WelcomeGuest extends AppCompatActivity
             fragment = new Acadamics();
             facadamics = (Acadamics) fragment;
             fragmentManager = getSupportFragmentManager();
-            LinearLayout ll = (LinearLayout) findViewById(R.id.mainll);
-            ll.removeAllViews();
-            fragmentManager.beginTransaction().replace(R.id.mainll, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
             Ftransaction=fragmentManager.beginTransaction();
             Ftransaction.show(facadamics);
             Ftransaction.commit();
@@ -298,9 +292,7 @@ public class WelcomeGuest extends AppCompatActivity
             fragment = new Placements();
             fplacements = (Placements) fragment;
             fragmentManager = getSupportFragmentManager();
-            LinearLayout ll = (LinearLayout) findViewById(R.id.mainll);
-            ll.removeAllViews();
-            fragmentManager.beginTransaction().replace(R.id.mainll, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
             Ftransaction=fragmentManager.beginTransaction();
             Ftransaction.show(fplacements);
             Ftransaction.commit();
@@ -311,9 +303,7 @@ public class WelcomeGuest extends AppCompatActivity
             fragment = new Feedback();
             ffeedback = (Feedback) fragment;
             fragmentManager = getSupportFragmentManager();
-            LinearLayout ll = (LinearLayout) findViewById(R.id.mainll);
-            ll.removeAllViews();
-            fragmentManager.beginTransaction().replace(R.id.mainll, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
             Ftransaction=fragmentManager.beginTransaction();
             Ftransaction.show(ffeedback);
             Ftransaction.commit();
@@ -324,9 +314,7 @@ public class WelcomeGuest extends AppCompatActivity
             fragment = new Gallery();
             fgallery = (Gallery) fragment;
             fragmentManager = getSupportFragmentManager();
-            LinearLayout ll = (LinearLayout) findViewById(R.id.mainll);
-            ll.removeAllViews();
-            fragmentManager.beginTransaction().replace(R.id.mainll, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
             Ftransaction=fragmentManager.beginTransaction();
             Ftransaction.show(fgallery);
             Ftransaction.commit();

@@ -31,7 +31,7 @@ public class Faculty extends Activity {
     private int flag = 0;
     private ProgressBar faculty_proress;
 
-    String user,passwrd;
+    String user,passwrd,fbranch;
 
     private static String facultyloginurl = "http://www.fratelloinnotech.com/smec/getfaculty.php";
 
@@ -49,13 +49,6 @@ public class Faculty extends Activity {
             @Override
             public void onClick(View view) {
                 faculty_status.setText("");
-                SharedPreferences preferences = getSharedPreferences("facultydetails",MODE_PRIVATE);
-                SharedPreferences.Editor editor = preferences.edit();
-                String fausernmae = finputuname.getText().toString();
-                String fapass = finputpwd.getText().toString();
-                editor.putString("fausername",fausernmae);
-                editor.putString("fapassword",fapass);
-                editor.commit();
                 new FacultyGetContacts().execute();
             }
         });
@@ -90,6 +83,7 @@ public class Faculty extends Activity {
                         JSONObject c = contacts.getJSONObject(i);
                         String name = c.getString("name");
                         String pass = c.getString("password");
+                        fbranch = c.getString("branch");
 //                        String date = c.getString("udate");
 //                        validation(name,pass);
                         if (user.equals(name) && passwrd.equals(pass)){
@@ -120,6 +114,14 @@ public class Faculty extends Activity {
             super.onPostExecute(i);
             faculty_proress.setVisibility(View.GONE);
             if (i == 1){
+                SharedPreferences preferences = getSharedPreferences("facultydetails",MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                String fausernmae = finputuname.getText().toString();
+                String fapass = finputpwd.getText().toString();
+                editor.putString("fausername",fausernmae);
+                editor.putString("fapassword",fapass);
+                editor.putString("fbranch",fbranch);
+                editor.commit();
                 Toast.makeText(getApplicationContext(), "Successfully Login", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(getApplicationContext(), WelcomeFaculty.class);
                 intent.putExtra("uname",user);

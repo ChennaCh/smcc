@@ -91,7 +91,7 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Aboutus();
-                t.replace(R.id.mainll, mFrag);
+                t.replace(R.id.frame, mFrag);
                 t.commit();
                 t.addToBackStack(Home.this.toString());
 
@@ -102,7 +102,7 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Acadamics();
-                t.replace(R.id.mainll, mFrag);
+                t.replace(R.id.frame, mFrag);
                 t.commit();
                 t.addToBackStack(Home.this.toString());
 
@@ -113,7 +113,7 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Facilities();
-                t.replace(R.id.mainll, mFrag);
+                t.replace(R.id.frame, mFrag);
                 t.commit();
                 t.addToBackStack(Home.this.toString());
 
@@ -132,7 +132,7 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Placements();
-                t.replace(R.id.mainll, mFrag);
+                t.replace(R.id.frame, mFrag);
                 t.commit();
                 t.addToBackStack(Home.this.toString());
 
@@ -143,7 +143,7 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Gallery();
-                t.replace(R.id.mainll, mFrag);
+                t.replace(R.id.frame, mFrag);
                 t.commit();
                 t.addToBackStack(Home.this.toString());
 

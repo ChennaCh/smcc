@@ -129,7 +129,7 @@ public class AdminWelcome extends Activity {
         scrollText.setSingleLine(true);
         scrollText.setSelected(true);
         init();
-        new GetNews().execute();
+        //new GetNews().execute();
     }
 
     private void init() {
@@ -181,48 +181,48 @@ public class AdminWelcome extends Activity {
                 .show();
     }
 
-    private class GetNews extends AsyncTask<Void,Void,ArrayList<GetFacultyBean>> {
-
-        @Override
-        protected ArrayList<GetFacultyBean> doInBackground(Void... voids) {
-            HttpHandler sh = new HttpHandler();
-
-            // Making a request to url and getting response
-            String jsonStr = sh.makeServiceCall(getnewsurl);
-            Log.e(TAG, "Response from url: " + jsonStr);
-
-            if (jsonStr != null) {
-                try {
-                    JSONObject jsonObj = new JSONObject(jsonStr);
-                    JSONArray contacts = jsonObj.getJSONArray("result");
-
-                    for (int i = 0; i < contacts.length(); i++) {
-                        JSONObject c = contacts.getJSONObject(i);
-                        String id = c.getString("id");
-                        String news = c.getString("news");
-                        String date = c.getString("pdate");
-
-                        if (id.equals("21")){
-
-                            scrollText.setText(news);
-                        }
-
-
-                    }
-                } catch (final JSONException e) {
-                    Log.e(TAG, "Json parsing error: " + e.getMessage());
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(AdminWelcome.this, "Json parsing error: " + e.getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    });
-                }
-            } else {
-                Toast.makeText(getApplicationContext(), "Couldn't get json from server", Toast.LENGTH_SHORT).show();
-            }
-
-            return null;
-        }
-    }
+//    private class GetNews extends AsyncTask<Void,Void,ArrayList<GetFacultyBean>> {
+//
+//        @Override
+//        protected ArrayList<GetFacultyBean> doInBackground(Void... voids) {
+//            HttpHandler sh = new HttpHandler();
+//
+//            // Making a request to url and getting response
+//            String jsonStr = sh.makeServiceCall(getnewsurl);
+//            Log.e(TAG, "Response from url: " + jsonStr);
+//
+//            if (jsonStr != null) {
+//                try {
+//                    JSONObject jsonObj = new JSONObject(jsonStr);
+//                    JSONArray contacts = jsonObj.getJSONArray("result");
+//
+//                    for (int i = 0; i < contacts.length(); i++) {
+//                        JSONObject c = contacts.getJSONObject(i);
+//                        String id = c.getString("id");
+//                        String news = c.getString("news");
+//                        String date = c.getString("pdate");
+//
+//                        if (id.equals("21")){
+//
+//                            scrollText.setText(news);
+//                        }
+//
+//
+//                    }
+//                } catch (final JSONException e) {
+//                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+//                    runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            Toast.makeText(AdminWelcome.this, "Json parsing error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+//                        }
+//                    });
+//                }
+//            } else {
+//                Toast.makeText(getApplicationContext(), "Couldn't get json from server", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            return null;
+//        }
+//    }
 }
