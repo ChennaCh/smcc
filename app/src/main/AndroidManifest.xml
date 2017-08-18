@@ -82,7 +82,8 @@
         <activity
             android:name=".Activity.FacultyChangePassword"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Activity.FacultyViewFeedback"></activity>
+        <activity android:name=".Activity.FacultyViewFeedback" />
+        <activity android:name=".Activity.ViewFacultyGuest"></activity>
     </application>
 
 </manifest>

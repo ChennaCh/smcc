@@ -1,16 +1,92 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.smcc.application.Fragments.Facilities">
 
-    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gifimage"
+            android:scaleType="centerCrop"
+            android:background="@null"
+            android:alpha="0.7"
+            android:src="@drawable/collegegif"
+            />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp">
+
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="#ac1c1c"
-        android:textSize="30dp"
-        android:gravity="center"
-        android:text="@string/hello_Facilities_fragment" />
+        android:layout_height="wrap_content"
+        android:text="Select the Department"
+        android:textAlignment="center"
+        android:layout_marginBottom="30dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="#ffffff"/>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/guest_cse"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rec_bgbutton"
+        android:drawablePadding="5dp"
+        android:text="CSE"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/guest_ece"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rec_bgbutton"
+        android:drawablePadding="5dp"
+        android:text="ECE"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/guest_eee"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rec_bgbutton"
+        android:drawablePadding="5dp"
+        android:text="EEE"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="13dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
