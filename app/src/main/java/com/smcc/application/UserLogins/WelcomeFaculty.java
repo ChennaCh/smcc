@@ -1,4 +1,4 @@
-package com.smcc.application.Activity;
+package com.smcc.application.UserLogins;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -13,9 +13,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.smcc.application.Activity.AdminWelcome;
+import com.smcc.application.Activity.FacultyChangePassword;
+import com.smcc.application.Activity.FacultyViewFeedback;
+import com.smcc.application.Activity.StartingActivity;
 import com.smcc.application.Adapters.SlideimageAdapter;
 import com.smcc.application.R;
-import com.smcc.application.UserLogins.Faculty;
 
 import java.util.ArrayList;
 import java.util.Timer;
