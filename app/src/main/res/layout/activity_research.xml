@@ -1,9 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="10dp"
     tools:context="com.smcc.application.Activity.Research">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Research"
+        android:textColor="#ac1c1a"
+        android:paddingBottom="5dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:weightSum="3"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/principal"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="2">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#000"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:text="Dr. B.P Singh BE, ME(llSC)," />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:text="Ph.D (Liverpool) UK ," />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="#000"
+        android:text="Post. Doc (U.K)" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000"
+            android:padding="5dp"
+            android:text="Director R and D" />
 
-</android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Dr. B.P. Singh is currently heading as Director (R and D) of SMEC. He has obtained M.E in High Voltage from llSC, Banglore and Ph.D from the University of Liverpool, England. He worked for 2 years at Bhabha Atomic Research Centre, Kalpakkam branch, as a scientific officer before joining Bharat Heavy Electricals Ltd. He worked there as General Manager and was in-charge of 5 departments."
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="He has more than 135 Research publications in various National and international journals and conferences. He was on Board of Studies of JNTUH from 2005-2008. He is presently on the Board of Studies of JNTU-Kakinada. He has guided 8 research scholars leading to Ph.D and more than 40 M.Tech projects. Presently he is guiding 5 Ph.D scholars. "
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="The faculty of various departments are actively pursuing research in their respective technical departments. In the academic year 2013-14 our faculty published more than thirty research papers in various national and international conferences and journals. A few of our senior students also contributed by publishing research papers in international conferences."
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Presently 30 faculty are registered with various universities and are pursuing research leading to Ph.D. Faculty and students have jointly developed many products and systems with their in-house research effort. "
+                android:textColor="#000000" />
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="A few research projects currently in hand are the development of Roboarm, Sixth sense Robo and Design of Impulse Generator for Lightning wave Simulating Cloud Thunder. Our students received several awards and prizes display of their research products. Typically i) First prize at Osmania University on Structural Model Making ii) Another prize on similar exhibition conducted by A.P State Irrigation Department at their training and Research Centre WALAMTARI."
+                android:textColor="#000000" />
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="The college conducted one month programme as Technology Awareness Month (TAM) during December 2013 to January 2014. The visiting faculty disseminated various state of art technology through their expert lecture of specialization. Students of respective streams visited National Remote Sensing Centre, High Voltage Electrical Power Substation, A.P. Transco, Bharat Heavy Electricals Ltd., etc. Some of the projects completed by our students are:"
+                android:textColor="#000000" />
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+                android:textSize="12dp"
+            android:text="1. Remote switching of electrical devices through mobile phone."
+                android:textColor="#716c6c" />
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:textSize="12dp"
+            android:layout_marginTop="15dp"
+            android:text="2. Generation of solar power"
+                android:textColor="#716c6c" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_marginTop="15dp"
+                android:text="3. Vertically mounted wind generator"
+                android:textColor="#716c6c" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_marginTop="15dp"
+                android:text="4. College communication using wireless LED notice board and R.F System"
+                android:textColor="#716c6c" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="The above research activities are conducted through R and D labs established for every department "
+                android:textColor="#000000" />
+
+
+
+            </LinearLayout>
+    </ScrollView>
+
+        </LinearLayout>

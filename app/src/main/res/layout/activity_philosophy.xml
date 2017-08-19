@@ -69,37 +69,44 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Easy is to judge the mistakes of others. Difficult is to recognize our own mistakes. It is easier to protect with slippers than to cover the earth with carpet."
-                android:textColor="#000000" /> <TextView
+                android:textColor="#000000" />
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="No one can go back and change a bad beginning; but anyone can start now and create a successful ending."
-            android:textColor="#000000" /> <TextView
+            android:textColor="#000000" />
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="If a problem can be solved, no need to worry about it. If a problem cannot be solved what is the use of worrying?"
-            android:textColor="#000000" /> <TextView
+            android:textColor="#000000" />
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="If you miss an opportunity don`t fill the eyes with tears. It will hide another better opportunity in front of you."
-            android:textColor="#000000" /> <TextView
+            android:textColor="#000000" />
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="“Changing the face” can change nothing. But “Facing the change” can change everything. Don`t complain about other; Change yourself if you want peace."
-            android:textColor="#000000" /> <TextView
+            android:textColor="#000000" />
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Mistakes are painful when they happen. But year`s later collection of mistakes is called experience, which leads to success."
-            android:textColor="#000000" /> <TextView
+            android:textColor="#000000" />
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="The essence of learning lies in pursuing the truth that liberates one from the darkness of ignorance and St. Martin's Engineering firmly believes that education is for liberation."
-            android:textColor="#000000" /> <TextView
+            android:textColor="#000000" />
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

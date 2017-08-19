@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
     tools:context="com.smcc.application.Activity.BoardOfStudies">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Board of Studies"
+        android:textColor="#ac1c1a"
+        android:paddingBottom="5dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bos"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Under Construction"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="18dp"
+        />
+
+
+</LinearLayout>

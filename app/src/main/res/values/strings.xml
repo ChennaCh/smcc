@@ -37,4 +37,9 @@
     <string name="title_activity_examinations">Examinations</string>
     <string name="title_activity_professional_societies">Professional Societies</string>
     <string name="title_activity_research">Research</string>
+    <string name="title_activity_placements_home">Placements Home</string>
+    <string name="title_activity_campus_selections">Campus Selections</string>
+    <string name="title_activity_students_placed">"Students Placed "</string>
+    <string name="title_activity_companies_visited">Companies Visited</string>
+    <string name="title_activity_placements_contact_us">"Contact Us "</string>
 </resources>

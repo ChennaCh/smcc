@@ -1,9 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="5dp"
     tools:context="com.smcc.application.Activity.ProfessionalSocieties">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Professional Societies"
+        android:textColor="#ac1c1a"
+        android:paddingBottom="5dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/placem"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/table_btechCourses"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:id="@+id/table_data1"
+                    android:layout_width="match_parent"
+                    android:weightSum="2"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/im1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/iete"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                         android:textColor="#000" />
+
+                    <ImageView
+                        android:id="@+id/im2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/iste"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:textColor="#000" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/table_data2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/im3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:src="@drawable/ieee"
+                        android:textColor="#000" />
+
+                    <ImageView
+                        android:id="@+id/im4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:src="@drawable/sae"
+                        android:textColor="#000" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/table_data3"
+                    android:layout_width="match_parent"
+                    android:weightSum="2"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/im5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ie"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:textColor="#000" />
+
+                    <ImageView
+                        android:id="@+id/im6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/csi"
+                        android:background="@drawable/cell_shape_data"
+                        android:padding="5dp"
+                        android:textColor="#000" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

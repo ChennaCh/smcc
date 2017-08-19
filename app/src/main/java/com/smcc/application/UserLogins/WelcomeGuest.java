@@ -1,51 +1,30 @@
 package com.smcc.application.UserLogins;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 
-import android.os.Looper;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.TextUtils;
 import android.support.design.widget.NavigationView;
 
 
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.smcc.application.Activity.AdminWelcome;
-import com.smcc.application.Adapters.SlideimageAdapter;
-import com.smcc.application.Bean.GetFacultyBean;
 import com.smcc.application.Fragments.Aboutus;
 import com.smcc.application.Fragments.Acadamics;
 import com.smcc.application.Fragments.Facilities;
 import com.smcc.application.Fragments.Feedback;
-import com.smcc.application.Fragments.Gallery;
+import com.smcc.application.Fragments.ContactUs;
 import com.smcc.application.Fragments.Home;
 import com.smcc.application.Fragments.Placements;
-import com.smcc.application.HttpHandler;
 import com.smcc.application.R;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import me.relex.circleindicator.CircleIndicator;
 
 public class WelcomeGuest extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -80,7 +59,7 @@ public class WelcomeGuest extends AppCompatActivity
     Acadamics facadamics;
     Facilities ffacilities;
     Feedback ffeedback;
-    Gallery fgallery;
+    ContactUs fgallery;
     Placements fplacements;
    // private static int currentPage = 0;
     //Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
@@ -311,8 +290,8 @@ public class WelcomeGuest extends AppCompatActivity
         }else if(id==R.id.nav_gallery){
             navItemIndex = 6;
             CURRENT_TAG = TAG_GALLERY;
-            fragment = new Gallery();
-            fgallery = (Gallery) fragment;
+            fragment = new ContactUs();
+            fgallery = (ContactUs) fragment;
             fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
             Ftransaction=fragmentManager.beginTransaction();
@@ -360,8 +339,8 @@ public class WelcomeGuest extends AppCompatActivity
                 ffeedback = (Feedback) fragment;
                 return ffeedback;
             case 5:
-                fragment = new Gallery();
-                fgallery = (Gallery) fragment;
+                fragment = new ContactUs();
+                fgallery = (ContactUs) fragment;
                 return fgallery;
             case 6:
                 fragment = new Placements();

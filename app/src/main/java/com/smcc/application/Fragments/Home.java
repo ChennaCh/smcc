@@ -2,35 +2,23 @@ package com.smcc.application.Fragments;
 
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.smcc.application.Activity.GuestFeedback;
 import com.smcc.application.Activity.Vision;
 import com.smcc.application.Adapters.SlideimageAdapter;
-import com.smcc.application.Bean.GetFacultyBean;
-import com.smcc.application.HttpHandler;
 import com.smcc.application.R;
-import com.smcc.application.UserLogins.WelcomeGuest;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -94,7 +82,6 @@ public class Home extends Fragment {
                 t.replace(R.id.frame, mFrag);
                 t.commit();
                 t.addToBackStack(Home.this.toString());
-
             }
         });
         acadamics.setOnClickListener(new View.OnClickListener() {
@@ -142,7 +129,7 @@ public class Home extends Fragment {
             @Override
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
-                Fragment mFrag = new Gallery();
+                Fragment mFrag = new ContactUs();
                 t.replace(R.id.frame, mFrag);
                 t.commit();
                 t.addToBackStack(Home.this.toString());
