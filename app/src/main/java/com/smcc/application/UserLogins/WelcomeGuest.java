@@ -15,6 +15,7 @@ import android.support.design.widget.NavigationView;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.smcc.application.Fragments.Aboutus;
@@ -37,7 +38,7 @@ public class WelcomeGuest extends AppCompatActivity
     private static final String TAG_FACILITIES = "facilities";
     private static final String TAG_FEEDBACK = "feedback";
     private static final String TAG_GALLERY = "gallery";
-    private static final String TAG_PLACEMENTS = "placements";
+    private static final String TAG_PLACEMENTS = "contactus";
 
     public static String CURRENT_TAG = TAG_HOME;
 
@@ -49,6 +50,7 @@ public class WelcomeGuest extends AppCompatActivity
     // flag to load home fragment when user presses back key
     private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler mHandler;
+    private View navHeader;
     private NavigationView navigationView;
     Fragment fragment = null;
     FragmentManager fragmentManager = getSupportFragmentManager();
@@ -94,6 +96,13 @@ public class WelcomeGuest extends AppCompatActivity
         }
       // initializing navigation menu
       //  setUpNavigationView();
+        fragment = new Home();
+        hf = (Home) fragment;
+        fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
+        Ftransaction=fragmentManager.beginTransaction();
+        Ftransaction.show(hf);
+        Ftransaction.commit();
 
     }
     private void setToolbarTitle() {
@@ -177,6 +186,13 @@ public class WelcomeGuest extends AppCompatActivity
                 navItemIndex = 0;
                 CURRENT_TAG = TAG_HOME;
                 loadHomeFragment();
+                fragment = new Home();
+                hf = (Home) fragment;
+                fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
+                Ftransaction=fragmentManager.beginTransaction();
+                Ftransaction.show(hf);
+                Ftransaction.commit();
                 return;
             }
         }
