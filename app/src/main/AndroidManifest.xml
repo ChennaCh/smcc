@@ -42,7 +42,7 @@
             android:label="@string/title_activity_welcome_guest"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".UserLogins.WelcomeFaculty"
+            android:name=".Activity.WelcomeFaculty"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Activity.Vision"
