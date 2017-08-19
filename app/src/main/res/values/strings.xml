@@ -19,11 +19,11 @@
     <string-array name="nav_item_activity_titles">
         <item>Home</item>
         <item>About Us</item>
-        <item>Facilities</item>
+        <item>Faculties</item>
         <item>Acadamics</item>
         <item>Placements</item>
         <item>Feedback</item>
-        <item>Gallery</item>
+        <item>Contact Us</item>
     </string-array>
     <string name="title_activity_faculty_detail">FacultyDetail</string>
     <string name="title_activity_principal">Profile Of Principal</string>

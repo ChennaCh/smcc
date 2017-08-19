@@ -42,9 +42,9 @@ public class Facilities extends Fragment {
         ece.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String cse = "ece";
+                String ece1 = "ece";
                 Intent intent = new Intent(getContext(), ViewFacultyGuest.class);
-                intent.putExtra("branch",cse);
+                intent.putExtra("branch",ece1);
                 startActivity(intent);
             }
         });
@@ -52,9 +52,9 @@ public class Facilities extends Fragment {
         eee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String cse = "eee";
+                String eee1 = "eee";
                 Intent intent = new Intent(getContext(), ViewFacultyGuest.class);
-                intent.putExtra("branch",cse);
+                intent.putExtra("branch",eee1);
                 startActivity(intent);
             }
         });
