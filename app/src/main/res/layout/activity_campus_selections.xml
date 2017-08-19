@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#fff"
-    android:padding="5dp"
+    android:padding="10dp"
     tools:context="com.smcc.application.Activity.CampusSelections">
     <TextView
         android:layout_width="match_parent"

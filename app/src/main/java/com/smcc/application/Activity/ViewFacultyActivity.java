@@ -33,7 +33,6 @@ public class ViewFacultyActivity extends Activity {
     private ProgressBar viewprogress;
     private Activity activity;
     private ArrayList<GetFacultyBean> adapterItems = new ArrayList<GetFacultyBean>();
-    private ImageView dleteimage;
 
     private static String url = "http://www.fratelloinnotech.com/smec/getfaculty.php";
 
@@ -45,7 +44,6 @@ public class ViewFacultyActivity extends Activity {
         setContentView(R.layout.activity_view_faculty);
 
         list = (ListView) findViewById(R.id.view_list);
-        dleteimage = (ImageView) findViewById(R.id.faculty_delete);
         viewprogress = (ProgressBar) findViewById(R.id.viewfaculty_progress);
         viewprogress.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
         new GetContacts().execute();
@@ -121,12 +119,14 @@ public class ViewFacultyActivity extends Activity {
                         Intent intent = new Intent(ViewFacultyActivity.this,FacultyDetail.class);
                         GetFacultyBean  b = getFacultyBeen.get(position);
                         ArrayList<String> values = new ArrayList<String>();
+
                         values.add(b.getGname());
                         values.add(b.getGmobile());
                         values.add(b.getGbranch());
                         values.add(b.getGqualification());
                         values.add(b.getGabout());
                         values.add(b.getGemail());
+                        values.add(b.getId());
                         intent.putStringArrayListExtra("values",values);
                         startActivity(intent);
                     }
