@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
@@ -32,6 +33,7 @@ public class WelcomeFaculty extends Activity {
     Integer[] COLLEGE= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
     TextView fscrollText;
     ArrayList<Integer> COLLEGEArray = new ArrayList<Integer>();
+    private String usernmae1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,10 @@ public class WelcomeFaculty extends Activity {
         fscrollText.setSelected(true);
         fchangepass = (Button) findViewById(R.id.f_changepass);
         ffeedback = (Button) findViewById(R.id.f_feedback);
+
+        SharedPreferences preferences = getSharedPreferences("facultydetails",MODE_PRIVATE);
+        usernmae1 = preferences.getString("fausername",null);
+        fscrollText.setText("Welcome to "+usernmae1.toUpperCase());
 
         ffeedback.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,6 +1,8 @@
 package com.smcc.application.Activity;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.smcc.application.Fragments.Aboutus;
+import com.smcc.application.Fragments.Home;
 import com.smcc.application.R;
 
 import org.apache.http.HttpEntity;

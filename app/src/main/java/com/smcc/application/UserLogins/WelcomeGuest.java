@@ -1,5 +1,6 @@
 package com.smcc.application.UserLogins;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -18,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.smcc.application.Activity.GuestFeedback;
 import com.smcc.application.Fragments.Aboutus;
 import com.smcc.application.Fragments.Acadamics;
 import com.smcc.application.Fragments.Facilities;
@@ -35,10 +37,10 @@ public class WelcomeGuest extends AppCompatActivity
     private static final String TAG_HOME = "home";
     private static final String TAG_ABOUTUS = "aboutus";
     private static final String TAG_ACADAMICS = "acadamics";
-    private static final String TAG_FACILITIES = "facilities";
+    private static final String TAG_FACULTIES = "faculties";
     private static final String TAG_FEEDBACK = "feedback";
-    private static final String TAG_GALLERY = "gallery";
-    private static final String TAG_PLACEMENTS = "contactus";
+    private static final String TAG_CONTACTUS = "contactus";
+    private static final String TAG_PLACEMENTS = "placements";
 
     public static String CURRENT_TAG = TAG_HOME;
 
@@ -220,7 +222,16 @@ public class WelcomeGuest extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_home) {
+            fragment = new Home();
+            hf = (Home) fragment;
+            navItemIndex = 0;
+            CURRENT_TAG = TAG_HOME;
+            fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
+            Ftransaction=fragmentManager.beginTransaction();
+            Ftransaction.show(hf);
+            Ftransaction.commit();
             return true;
         }
 
@@ -260,7 +271,7 @@ public class WelcomeGuest extends AppCompatActivity
     }
         else if (id == R.id.nav_facilities) {
             navItemIndex = 2;
-            CURRENT_TAG = TAG_FACILITIES;
+            CURRENT_TAG = TAG_FACULTIES;
             Fragment fragment1 = new Facilities();
             ffacilities = (Facilities) fragment1;
             fragmentManager = getSupportFragmentManager();
@@ -294,18 +305,20 @@ public class WelcomeGuest extends AppCompatActivity
 
         } else if (id == R.id.nav_feedback) {
             navItemIndex = 5;
-            CURRENT_TAG = TAG_FEEDBACK;
-            fragment = new Feedback();
-            ffeedback = (Feedback) fragment;
-            fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
-            Ftransaction=fragmentManager.beginTransaction();
-            Ftransaction.show(ffeedback);
-            Ftransaction.commit();
+//            CURRENT_TAG = TAG_FEEDBACK;
+//            fragment = new Feedback();
+//            ffeedback = (Feedback) fragment;
+//            fragmentManager = getSupportFragmentManager();
+//            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
+//            Ftransaction=fragmentManager.beginTransaction();
+//            Ftransaction.show(ffeedback);
+//            Ftransaction.commit();
+            Intent feedbackintent = new Intent(getApplicationContext(), GuestFeedback.class);
+            startActivity(feedbackintent);
 
         }else if(id==R.id.nav_gallery){
             navItemIndex = 6;
-            CURRENT_TAG = TAG_GALLERY;
+            CURRENT_TAG = TAG_CONTACTUS;
             fragment = new ContactUs();
             fgallery = (ContactUs) fragment;
             fragmentManager = getSupportFragmentManager();
