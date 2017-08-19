@@ -3,6 +3,10 @@
     package="com.smcc.application">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -117,6 +121,7 @@
         <activity
             android:name=".Activity.PlacementsContactUs"
             android:label="@string/title_activity_placements_contact_us"></activity>
+        <activity android:name=".Activity.CollegeMap"></activity>
     </application>
 
 </manifest>

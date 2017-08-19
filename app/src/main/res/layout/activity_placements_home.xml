@@ -1,9 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
     tools:context="com.smcc.application.Activity.PlacementsHome">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Placements Home"
+        android:textColor="#ac1c1a"
+        android:paddingBottom="5dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/placementshome"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Vision :"
+                android:textColor="#ac1c1a"
+                android:paddingBottom="5dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                />
+            <View
+                android:id="@+id/SplitLine_hor1"
+                android:layout_width="match_parent"
+                android:layout_height= "2dp"
+                android:background="#d7d0d0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="To create an extreme sense of confidence in students by counseling,  engaging them in a variety of activities which in turn shall also contribute in honing up their skills;  encouraging them to put their best now, enabling us create opportunities and placing them in professional enterprises and thereby gainfully engaging the students in nation building."
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Objective :"
+                android:textColor="#ac1c1a"
+                android:paddingBottom="5dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                />
+            <View
+                android:id="@+id/SplitLine_hor2"
+                android:layout_width="match_parent"
+                android:layout_height= "2dp"
+                android:background="#d7d0d0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Confidence being the key to success and excel, we work towards molding our students by taking several confidence building measures."
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Encourage students to take initiatives in a variety of activities conducted in the college by organizing Debates, Group Discussions, Workshops, Guest Lectures, Mock Interviews etc.  We also provide Career Guidance."
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Placements :"
+                android:textColor="#ac1c1a"
+                android:paddingBottom="5dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                />
+            <View
+                android:id="@+id/SplitLine_hor3"
+                android:layout_width="match_parent"
+                android:layout_height= "2dp"
+                android:background="#d7d0d0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Every year, hundreds of students are placed in different companies.  Companies start their recruitment processes from fourth year/first semester onwards.  It has always been the endeavor of the training and placement wing to be in contact with medium and large professionally managed organizations for offering our students placements to carve out their future.  We have been playing host to many companies for conducting interviews every year and they are appreciative about the overall performance of our students."
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="We also provide internship programs for our students in IT and various  Core Companies."
+                android:textColor="#000000" />
+
+</LinearLayout>
+    </ScrollView>
+        </LinearLayout>
