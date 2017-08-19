@@ -113,9 +113,6 @@
             android:name=".Activity.CampusSelections"
             android:label="@string/title_activity_campus_selections" />
         <activity
-            android:name=".Activity.StudentsPlaced"
-            android:label="@string/title_activity_students_placed" />
-        <activity
             android:name=".Activity.CompaniesVisited"
             android:label="@string/title_activity_companies_visited" />
         <activity

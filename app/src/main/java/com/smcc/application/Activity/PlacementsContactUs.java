@@ -10,7 +10,7 @@ public class PlacementsContactUs extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_placements_contact_us);
+        setContentView(R.layout.fragment_contactus);
     }
 
 }
