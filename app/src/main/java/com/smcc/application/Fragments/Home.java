@@ -79,9 +79,10 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Aboutus();
-                t.replace(R.id.frame, mFrag);
-                t.commit();
+                t.add(R.id.frame, mFrag);
                 t.addToBackStack(Home.this.toString());
+                t.commit();
+
             }
         });
         acadamics.setOnClickListener(new View.OnClickListener() {
@@ -89,9 +90,10 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Acadamics();
-                t.replace(R.id.frame, mFrag);
-                t.commit();
+                t.add(R.id.frame, mFrag);
                 t.addToBackStack(Home.this.toString());
+                t.commit();
+
 
             }
         });
@@ -100,9 +102,10 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Facilities();
-                t.replace(R.id.frame, mFrag);
-                t.commit();
+                t.add(R.id.frame, mFrag);
                 t.addToBackStack(Home.this.toString());
+                t.commit();
+
 
             }
         });
@@ -119,9 +122,10 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Placements();
-                t.replace(R.id.frame, mFrag);
-                t.commit();
+                t.add(R.id.frame, mFrag);
                 t.addToBackStack(Home.this.toString());
+                t.commit();
+
 
             }
         });
@@ -130,9 +134,10 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new ContactUs();
-                t.replace(R.id.frame, mFrag);
-                t.commit();
+                t.add(R.id.frame, mFrag);
                 t.addToBackStack(Home.this.toString());
+                t.commit();
+
 
             }
         });
