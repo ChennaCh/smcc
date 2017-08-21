@@ -1,54 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="#243038"
-    tools:context="com.smcc.application.UserLogins.LoginTypes">
+    android:layout_gravity="center"
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true" >
+        android:fillViewport="true">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:padding="10dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="72dp"
-            android:text="SMEC"
-            android:textSize="60dp"
-            android:textStyle="italic"
-            android:textColor="#fff"
-            android:layout_marginBottom="40dp"
-            android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
 
 
-    <Button
-        android:id="@+id/admin"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rec_bgbutton"
-        android:drawablePadding="5dp"
-        android:drawableTop="@mipmap/adminicon"
-        android:padding="5dp"
-        android:text="Admin"
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:textStyle="bold" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@drawable/smcclogo1"
+                />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:weightSum="2.0">
+
+            <Button
+                android:id="@+id/admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rec_bgbutton"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@mipmap/adminicon"
+                android:padding="5dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="80dp"
+                android:text="Admin"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
 
             <Button
                 android:id="@+id/faculty"
@@ -56,13 +50,14 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rec_bgbutton"
                 android:drawablePadding="5dp"
-                android:layout_weight="1"
-                android:drawableTop="@mipmap/adminicon"
+                android:drawableLeft="@mipmap/faculty"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="80dp"
                 android:padding="5dp"
-                android:layout_marginRight="5dp"
                 android:text="Faculty"
                 android:textStyle="bold"
-                android:textColor="#fff"
+                android:textColor="@color/white"
                 android:textAlignment="center" />
 
             <Button
@@ -71,17 +66,18 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rec_bgbutton"
                 android:drawablePadding="5dp"
-                android:layout_weight="1"
-                android:layout_marginLeft="5dp"
-                android:drawableTop="@mipmap/adminicon"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="80dp"
+                android:drawableLeft="@mipmap/guest"
                 android:padding="5dp"
                 android:text="Guest"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:textColor="#fff" />
+                android:textColor="@color/white" />
 
-    </LinearLayout>
-    </LinearLayout>
+        </LinearLayout>
     </ScrollView>
+
 
 </LinearLayout>

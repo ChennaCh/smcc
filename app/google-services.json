@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "58735638740",
+    "firebase_url": "https://smec-91387.firebaseio.com",
+    "project_id": "smec-91387",
+    "storage_bucket": "smec-91387.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58735638740:android:682fd16e6a12fdc9",
+        "android_client_info": {
+          "package_name": "com.smcc.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58735638740-1b3a4ovpm51mmjc5iol8aun55brj228m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smcc.application",
+            "certificate_hash": "11263b961cf864c63a3f45742047489e22a52998"
+          }
+        },
+        {
+          "client_id": "58735638740-6tsnqhhocqgunobrp1v9u1jpn5beu28g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPd-uAaYHsx3cJ7IjhVi4PVYWvEcW6grM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58735638740-6tsnqhhocqgunobrp1v9u1jpn5beu28g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
