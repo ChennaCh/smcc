@@ -2,7 +2,6 @@ package com.smcc.application.Fragments;
 
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -10,23 +9,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.smcc.application.Activity.GuestFeedback;
 import com.smcc.application.Activity.Vision;
 import com.smcc.application.Adapters.SlideimageAdapter;
-import com.smcc.application.HttpHandler;
 import com.smcc.application.R;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -63,7 +55,7 @@ public class Home extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
@@ -87,8 +79,10 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Aboutus();
+                container.removeAllViews();
                 t.add(R.id.frame, mFrag);
                 t.addToBackStack(Home.this.toString());
+                //t.hide();
                 t.commit();
 
             }
@@ -149,12 +143,11 @@ public class Home extends Fragment {
 
             }
         });
-        new GetNewsGuest().execute();
+       // new GetNewsGuest().execute();
 
         return view;
 
     }
-
 
     private void init() {
 
@@ -186,49 +179,50 @@ public class Home extends Fragment {
         handler.post(Update);
     }
 
-    private class GetNewsGuest extends AsyncTask<Void,Void,Void> {
+//    private class GetNewsGuest extends AsyncTask<Void,Void,Void> {
+//
+//        @Override
+//        protected Void doInBackground(Void... voids) {
+//            HttpHandler sh = new HttpHandler();
+//
+//            // Making a request to url and getting response
+//            String jsonStr = sh.makeServiceCall(getnewsurl2);
+//            Log.e(TAG, "Response from url: " + jsonStr);
+//
+//            if (jsonStr != null) {
+//                try {
+//                    JSONObject jsonObj = new JSONObject(jsonStr);
+//                    JSONArray contacts = jsonObj.getJSONArray("result");
+//                    String allnews="";
+//                    for (int i = 0; i < contacts.length(); i++) {
+//                        JSONObject c = contacts.getJSONObject(i);
+//                        String id = c.getString("id");
+//                        String news = c.getString("news");
+//                        String date1value = c.getString("pdate");
+//                        allnews+=news;
+//
+//
+//                    }
+//                    try {
+//                        gscrollText.setText(allnews);
+//                    }catch (Exception e){
+//                        e.printStackTrace();
+//                    }
+//                } catch (final JSONException e) {
+//                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+//                    getActivity().runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            Toast.makeText(getActivity(), "Json parsing error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+//                        }
+//                    });
+//                }
+//            } else {
+//                Toast.makeText(getActivity(), "Couldn't get json from server", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            return null;
+//        }
+//    }
 
-        @Override
-        protected Void doInBackground(Void... voids) {
-            HttpHandler sh = new HttpHandler();
-
-            // Making a request to url and getting response
-            String jsonStr = sh.makeServiceCall(getnewsurl2);
-            Log.e(TAG, "Response from url: " + jsonStr);
-
-            if (jsonStr != null) {
-                try {
-                    JSONObject jsonObj = new JSONObject(jsonStr);
-                    JSONArray contacts = jsonObj.getJSONArray("result");
-                    String allnews="";
-                    for (int i = 0; i < contacts.length(); i++) {
-                        JSONObject c = contacts.getJSONObject(i);
-                        String id = c.getString("id");
-                        String news = c.getString("news");
-                        String date1value = c.getString("pdate");
-                        allnews+=news;
-
-
-                    }
-                    try {
-                        gscrollText.setText(allnews);
-                    }catch (Exception e){
-                        e.printStackTrace();
-                    }
-                } catch (final JSONException e) {
-                    Log.e(TAG, "Json parsing error: " + e.getMessage());
-                    getActivity().runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(getActivity(), "Json parsing error: " + e.getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    });
-                }
-            } else {
-                Toast.makeText(getActivity(), "Couldn't get json from server", Toast.LENGTH_SHORT).show();
-            }
-
-            return null;
-        }
-    }
 }

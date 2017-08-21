@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#fff"
     android:layout_height="match_parent"
-    android:padding="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:layout_height="match_parent"
+        android:padding="10dp">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Profile of Principal"
+        android:gravity="left"
+        android:text="Profile of Principal :"
         android:textColor="#ac1c1a"
-        android:paddingBottom="5dp"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/principal"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,5 +43,6 @@
         android:text="Dr.S.P.Venu Madhava Rao holds Degree in Electronics and Communication Engineering, Post Graduation in Digital Systems and Computer Electroncis and Ph.D. in VLSI. The areas of interest of Dr.S.P.Venu Madhava Rao are Nano Electronics, VLSI, Device Modelling, Embedded Systems and Machine Learning with artificial intelligence. The other areas of interest include cognitive learning and have a passion towards coding complex Algorithms. Dr.S.P.Venu Madhava Rao hobbies includes reading novels particularly adventure novels and has a flair for writing research papers and has written 5 Books and around 30 papers in various International Journals. Dr.S.P.Venu Madhava Rao has lot of interest in sports and plays shuttle, Badminton, Table Tennis, Cricket, Chess etc. He strongly beliefs in the principle “that hardworking and sincerity will always bring success”. "
         android:textColor="#000000" />
     </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>
