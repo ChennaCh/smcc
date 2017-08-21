@@ -1,13 +1,24 @@
 package com.smcc.application.UserLogins;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.content.LocalBroadcastManager;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.smcc.application.R;
+import com.smcc.application.Utils.NotificationUtils;
+import com.smcc.application.app.Config;
 
 public class LoginTypes extends Activity {
     Button adminbtn, facultybtn, guestbtn;
@@ -15,7 +26,7 @@ public class LoginTypes extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sample);
+        setContentView(R.layout.activity_login_types);
 
         adminbtn = (Button) findViewById(R.id.admin);
         facultybtn = (Button) findViewById(R.id.faculty);
@@ -49,6 +60,7 @@ public class LoginTypes extends Activity {
         });
     }
 
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(Intent.ACTION_MAIN);
@@ -56,8 +68,6 @@ public class LoginTypes extends Activity {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
 
-//        finish();
     }
-
 
 }
