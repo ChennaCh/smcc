@@ -14,10 +14,12 @@
         android:icon="@drawable/smcclogo"
         android:label="@string/app_name"
         android:largeHeap="true"
+
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".Activity.StartingActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,98 +29,134 @@
         </activity>
         <activity
             android:name=".UserLogins.LoginTypes"
-            android:theme="@style/StatusTheme" />
+            android:theme="@style/StatusTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".UserLogins.Admin"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".UserLogins.Faculty"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.AdminWelcome"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".UserLogins.WelcomeGuest"
             android:label="@string/title_activity_welcome_guest"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".UserLogins.WelcomeFaculty"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Vision"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.AddFacultyActivty"
-            android:theme="@style/StatusTheme" />
+            android:theme="@style/StatusTheme"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.ViewFacultyActivity"
-            android:theme="@style/GetFacultyTheme" />
+            android:theme="@style/GetFacultyTheme"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.PostNews"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.ChangePassword"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.GuestFeedback"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.ViewFeedBack"
-            android:theme="@style/GetFacultyTheme" />
+            android:theme="@style/GetFacultyTheme"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.FacultyDetail"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Principal"
-            android:label="@string/title_activity_principal" />
+            android:label="@string/title_activity_principal"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Management"
-            android:label="@string/title_activity_management" />
+            android:label="@string/title_activity_management"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Philosophy"
-            android:label="@string/title_activity_philosophy" />
+            android:label="@string/title_activity_philosophy"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.AdminHrPolicy"
-            android:label="@string/title_activity_admin_hr_policy" />
+            android:label="@string/title_activity_admin_hr_policy"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Mou"
-            android:label="@string/title_activity_mou" />
+            android:label="@string/title_activity_mou"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.FacultyChangePassword"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Activity.FacultyViewFeedback" />
-        <activity android:name=".Activity.ViewFacultyGuest" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FacultyViewFeedback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.ViewFacultyGuest"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.BtechPrograms"
-            android:label="@string/title_activity_btech_programs" />
+            android:label="@string/title_activity_btech_programs"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.MtechPrograms"
-            android:label="@string/title_activity_mtech_programs" />
+            android:label="@string/title_activity_mtech_programs"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.BoardOfStudies"
-            android:label="@string/title_activity_board_of_studies" />
+            android:label="@string/title_activity_board_of_studies"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Examinations"
-            android:label="@string/title_activity_examinations" />
+            android:label="@string/title_activity_examinations"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.ProfessionalSocieties"
-            android:label="@string/title_activity_professional_societies" />
+            android:label="@string/title_activity_professional_societies"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.Research"
-            android:label="@string/title_activity_research" />
+            android:label="@string/title_activity_research"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.PlacementsHome"
-            android:label="@string/title_activity_placements_home" />
+            android:label="@string/title_activity_placements_home"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.CampusSelections"
-            android:label="@string/title_activity_campus_selections" />
+            android:label="@string/title_activity_campus_selections"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.CompaniesVisited"
-            android:label="@string/title_activity_companies_visited" />
+            android:label="@string/title_activity_companies_visited"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.PlacementsContactUs"
-            android:label="@string/title_activity_placements_contact_us" />
-        <activity android:name=".Activity.CollegeMap" />
+            android:label="@string/title_activity_placements_contact_us"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CollegeMap"
+            android:screenOrientation="portrait" />
 
         <service android:name=".service.MyFirebaseMessagingService">
             <intent-filter>
