@@ -5,18 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.smcc.application.Activity.AdminHrPolicy">
+    android:background="?android:windowBackground"
+    tools:context="com.smcc.application.AboutUsActivities.AdminHrPolicy">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
+    <LinearLayout
+        android:padding="10dp"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:textStyle="bold"
         android:textColor="#ac1c1c"
-        android:padding="5dp"
-        android:textSize="18dp"
-        android:text="Administration HR Policy"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp" />
+        android:textSize="16dp"
+        android:text="Administration HR Policy :" />
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -32,4 +40,5 @@
         android:text="Under Construction"
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="8dp" />
+        </LinearLayout>
 </LinearLayout>

@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.smcc.application.Activity.GuestFeedback;
-import com.smcc.application.Activity.Vision;
+import com.smcc.application.AboutUsActivities.Vision;
 import com.smcc.application.Adapters.SlideimageAdapter;
 import com.smcc.application.R;
 
@@ -79,7 +79,6 @@ public class Home extends Fragment {
             public void onClick(View view) {
                 FragmentTransaction t = getFragmentManager().beginTransaction();
                 Fragment mFrag = new Aboutus();
-                container.removeAllViews();
                 t.add(R.id.frame, mFrag);
                 t.addToBackStack(Home.this.toString());
                 //t.hide();

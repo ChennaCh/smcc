@@ -27,7 +27,7 @@
         </activity>
         <activity
             android:name=".UserLogins.LoginTypes"
-            android:theme="@style/StatusTheme" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".UserLogins.Admin"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -45,7 +45,7 @@
             android:name=".UserLogins.WelcomeFaculty"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".Activity.Vision"
+            android:name=".AboutUsActivities.Vision"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Activity.AddFacultyActivty"
@@ -69,25 +69,25 @@
             android:name=".Activity.FacultyDetail"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".Activity.Principal"
+            android:name=".AboutUsActivities.Principal"
             android:label="@string/title_activity_principal"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
-            android:name=".Activity.Management"
+            android:name=".AboutUsActivities.Management"
             android:label="@string/title_activity_management"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
-            android:name=".Activity.Philosophy"
+            android:name=".AboutUsActivities.Philosophy"
             android:label="@string/title_activity_philosophy"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
-            android:name=".Activity.AdminHrPolicy"
+            android:name=".AboutUsActivities.AdminHrPolicy"
             android:label="@string/title_activity_admin_hr_policy"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
-            android:name=".Activity.Mou"
+            android:name=".AboutUsActivities.Mou"
             android:label="@string/title_activity_mou"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
             android:name=".Activity.FacultyChangePassword"
             android:theme="@style/Theme.AppCompat.NoActionBar" />

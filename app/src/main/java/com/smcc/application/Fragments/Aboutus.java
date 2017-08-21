@@ -1,30 +1,21 @@
 package com.smcc.application.Fragments;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.smcc.application.Activity.AdminHrPolicy;
-import com.smcc.application.Activity.Management;
-import com.smcc.application.Activity.Mou;
-import com.smcc.application.Activity.Philosophy;
-import com.smcc.application.Activity.Principal;
-import com.smcc.application.Activity.Vision;
+import com.smcc.application.AboutUsActivities.AdminHrPolicy;
+import com.smcc.application.AboutUsActivities.Management;
+import com.smcc.application.AboutUsActivities.Mou;
+import com.smcc.application.AboutUsActivities.Philosophy;
+import com.smcc.application.AboutUsActivities.Principal;
+import com.smcc.application.AboutUsActivities.Vision;
 import com.smcc.application.R;
 import com.smcc.application.UserLogins.WelcomeGuest;
-
-import static com.smcc.application.UserLogins.WelcomeGuest.navItemIndex;
 
 
 public class Aboutus extends Fragment {

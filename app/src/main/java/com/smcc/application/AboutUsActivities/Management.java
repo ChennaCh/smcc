@@ -1,7 +1,6 @@
-package com.smcc.application.Activity;
+package com.smcc.application.AboutUsActivities;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 

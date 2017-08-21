@@ -7,6 +7,7 @@
         <item name="android:textColorPrimaryInverse">@android:color/background_dark</item>
         <item name="android:windowBackground">?android:attr/textColorHintInverse</item>
         <item name="android:textColorSecondaryInverse">@color/colorPrimary</item>
+        <item name="android:colorPrimary">@color/primary_material_dark</item>
     </style>
     <style name="ToolbarTheme" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
         <item name="android:textColorPrimary">#fff</item>

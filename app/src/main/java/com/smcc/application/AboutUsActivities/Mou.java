@@ -1,14 +1,12 @@
-package com.smcc.application.Activity;
+package com.smcc.application.AboutUsActivities;
 
 import android.os.Bundle;
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.smcc.application.R;
-
-public class Mou extends Activity {
+public class Mou extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +15,9 @@ public class Mou extends Activity {
         WebView webView=new WebView(Mou.this);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setPluginState(WebSettings.PluginState.ON);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setBackgroundColor(Color.parseColor("#80000000"));
         //---you need this to prevent the webview from
         // launching another browser when a url
         // redirection occurs---
@@ -36,6 +36,11 @@ public class Mou extends Activity {
                 WebView view, String url) {
             return(false);
         }
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
 }

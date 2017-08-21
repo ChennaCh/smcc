@@ -1,13 +1,7 @@
-package com.smcc.application.Activity;
+package com.smcc.application.AboutUsActivities;
 
-import android.app.Activity;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
-import android.text.Spanned;
-import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
 
 import com.smcc.application.R;
