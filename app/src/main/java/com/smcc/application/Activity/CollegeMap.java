@@ -2,6 +2,7 @@ package com.smcc.application.Activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -10,7 +11,7 @@ import android.webkit.WebViewClient;
  * Created by admin on 8/19/2017.
  */
 
-public class CollegeMap extends Activity {
+public class CollegeMap extends AppCompatActivity {
 //    String latitude= "17.541723";
 //    String longitude = "78.474583";
    // String url = "http://maps.google.com/maps/api/staticmap?center=" + latitude + "," + longitude+ "&zoom=10&size=400x400&sensor=false";
@@ -19,6 +20,8 @@ public class CollegeMap extends Activity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_mou);
         WebView webView=new WebView(CollegeMap.this);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setPluginState(WebSettings.PluginState.ON);
 
@@ -40,6 +43,11 @@ public class CollegeMap extends Activity {
                 WebView view, String url) {
             return(false);
         }
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
 }

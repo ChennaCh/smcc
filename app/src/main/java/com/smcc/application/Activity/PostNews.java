@@ -3,6 +3,7 @@ package com.smcc.application.Activity;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,7 +25,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PostNews extends Activity {
+public class PostNews extends AppCompatActivity {
     EditText postnews;
     Button postbtn;
     String getnews;
@@ -34,7 +35,8 @@ public class PostNews extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_news);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         postnews = (EditText) findViewById(R.id.news_post);
         result = (TextView) findViewById(R.id.news_result);
         postbtn = (Button) findViewById(R.id.post_button);
@@ -87,5 +89,10 @@ public class PostNews extends Activity {
         }
         SendNewsReqAsyncTask sendPostReqAsyncTask = new SendNewsReqAsyncTask();
         sendPostReqAsyncTask.execute(getnews);
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

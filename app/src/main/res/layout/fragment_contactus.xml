@@ -5,16 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="10dp"
-    android:background="@color/white"
-    tools:context="com.smcc.application.Fragments.ContactUs">
+    android:background="@color/white">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Contact Us"
+        android:text="Contact Us :"
         android:textColor="#ac1c1a"
         android:paddingBottom="5dp"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         />
         <RelativeLayout

@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -25,7 +27,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Admin extends Activity {
+public class Admin extends AppCompatActivity {
     private String TAG = Admin.class.getSimpleName();
     private ProgressDialog pDialog;
     private ListView lv;
@@ -35,9 +37,10 @@ public class Admin extends Activity {
     int flag = 0;
 
     public EditText inputuname,inputpwd;
-    Button adminLogin;
+    Button adminLogin,backbtn;
     String user,passwrd;
     TextView textView;
+
     private static String url = "http://www.fratelloinnotech.com/smec/adminusers.php";
 
     @Override
@@ -49,6 +52,9 @@ public class Admin extends Activity {
         progressBar = (ProgressBar) findViewById(R.id.admin_progress);
         adminLogin=(Button)findViewById(R.id.btn_login);
         textView = (TextView)findViewById(R.id.settext);
+        backbtn=(Button)findViewById(R.id.backbtn);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         adminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +68,13 @@ public class Admin extends Activity {
                 editor.putString("password",pass);
                 editor.commit();
                 new GetContacts1().execute();
+                backbtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent=new Intent(Admin.this,LoginTypes.class);
+                        startActivity(intent);
+                    }
+                });
             }
         });
     }
@@ -138,5 +151,10 @@ public class Admin extends Activity {
     public void onBackPressed() {
         Intent inte = new Intent(Admin.this,LoginTypes.class);
         startActivity(inte);
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

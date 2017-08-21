@@ -7,15 +7,14 @@
     android:background="#fff"
     android:orientation="vertical"
     android:padding="5dp"
-    tools:context="com.smcc.application.Activity.BtechPrograms">
+    tools:context="com.smcc.application.AcademicsActivities.BtechPrograms">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="M.Tech Programs"
+        android:text="M.Tech Programs :"
         android:textColor="#ac1c1a"
         android:paddingBottom="5dp"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         />
 

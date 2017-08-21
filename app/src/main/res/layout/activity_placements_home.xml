@@ -7,15 +7,14 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:background="#fff"
-    tools:context="com.smcc.application.Activity.PlacementsHome">
+    tools:context="com.smcc.application.PlacementsActivities.PlacementsHome">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Placements Home"
+        android:text="Placements Home :"
         android:textColor="#ac1c1a"
         android:paddingBottom="5dp"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         />
 

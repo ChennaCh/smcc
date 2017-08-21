@@ -3,6 +3,7 @@ package com.smcc.application.Activity;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -23,7 +24,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ViewFeedBack extends Activity {
+public class ViewFeedBack extends AppCompatActivity {
 
     private RecyclerView recyle;
     private FeedBackAdapter feedBackAdapter;
@@ -36,6 +37,8 @@ public class ViewFeedBack extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_feed_back);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         progress = (ProgressBar) findViewById(R.id.feedabck_progress1);
         recyle = (RecyclerView) findViewById(R.id.feedback_recyclerview);
         new AsyncFetch().execute();
@@ -101,6 +104,11 @@ public class ViewFeedBack extends Activity {
             recyle.setLayoutManager(new LinearLayoutManager(ViewFeedBack.this));
 
         }
+    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
 }

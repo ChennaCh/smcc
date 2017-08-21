@@ -30,10 +30,10 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".UserLogins.Admin"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".UserLogins.Faculty"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".Activity.AdminWelcome"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -49,25 +49,26 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Activity.AddFacultyActivty"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".Activity.ViewFacultyActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".Activity.PostNews"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".Activity.ChangePassword"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".Activity.GuestFeedback"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".Activity.ViewFeedBack"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".Activity.FacultyDetail"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat"
+            android:label="Faculty Details"/>
         <activity
             android:name=".AboutUsActivities.Principal"
             android:label="@string/title_activity_principal"
@@ -93,53 +94,53 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Activity.FacultyViewFeedback"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
             android:name=".Activity.ViewFacultyGuest"
             android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity
-            android:name=".Activity.BtechPrograms"
+            android:name=".AcademicsActivities.BtechPrograms"
             android:label="@string/title_activity_btech_programs"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
-            android:name=".Activity.MtechPrograms"
+            android:name=".AcademicsActivities.MtechPrograms"
             android:label="@string/title_activity_mtech_programs"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
-            android:name=".Activity.BoardOfStudies"
+            android:name=".AcademicsActivities.BoardOfStudies"
             android:label="@string/title_activity_board_of_studies"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
-            android:name=".Activity.Examinations"
+            android:name=".AcademicsActivities.Examinations"
             android:label="@string/title_activity_examinations"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
-            android:name=".Activity.ProfessionalSocieties"
+            android:name=".AcademicsActivities.ProfessionalSocieties"
             android:label="@string/title_activity_professional_societies"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
-            android:name=".Activity.Research"
+            android:name=".AcademicsActivities.Research"
             android:label="@string/title_activity_research"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
-            android:name=".Activity.PlacementsHome"
+            android:name=".PlacementsActivities.PlacementsHome"
             android:label="@string/title_activity_placements_home"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
-            android:name=".Activity.CampusSelections"
+            android:name=".PlacementsActivities.CampusSelections"
             android:label="@string/title_activity_campus_selections"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
-            android:name=".Activity.CompaniesVisited"
+            android:name=".PlacementsActivities.CompaniesVisited"
             android:label="@string/title_activity_companies_visited"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
-            android:name=".Activity.PlacementsContactUs"
+            android:name=".PlacementsActivities.PlacementsContactUs"
             android:label="@string/title_activity_placements_contact_us"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
             android:name=".Activity.CollegeMap"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat"/>
 
         <service android:name=".service.MyFirebaseMessagingService">
             <intent-filter>

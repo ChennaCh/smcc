@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +23,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Faculty extends Activity {
+public class Faculty extends AppCompatActivity {
 
     private String TAG = Faculty.class.getSimpleName();
     private EditText finputpwd,finputuname;
@@ -45,6 +46,8 @@ public class Faculty extends Activity {
         facultylogin=(Button)findViewById(R.id.faculty_login);
         faculty_status = (TextView) findViewById(R.id.faculty_settext);
         faculty_proress = (ProgressBar) findViewById(R.id.faculty_progress);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         facultylogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -137,4 +140,10 @@ public class Faculty extends Activity {
         Intent inte = new Intent(Faculty.this,LoginTypes.class);
         startActivity(inte);
     }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 }
+

@@ -43,7 +43,8 @@ public class FacultyDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faculty_detail);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         branch = (TextView) findViewById(R.id.faculty_branch);
         phone = (TextView) findViewById(R.id.faculty_phoneno);
         qualification = (TextView) findViewById(R.id.faculty_qualification);
@@ -130,4 +131,10 @@ public class FacultyDetail extends AppCompatActivity {
         SendPostReqAsyncTask sendPostReqAsyncTask = new SendPostReqAsyncTask();
         sendPostReqAsyncTask.execute(tid);
     }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
 }

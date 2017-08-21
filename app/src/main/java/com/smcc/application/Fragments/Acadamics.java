@@ -9,12 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.smcc.application.Activity.BoardOfStudies;
-import com.smcc.application.Activity.BtechPrograms;
-import com.smcc.application.Activity.Examinations;
-import com.smcc.application.Activity.MtechPrograms;
-import com.smcc.application.Activity.ProfessionalSocieties;
-import com.smcc.application.Activity.Research;
+import com.smcc.application.AcademicsActivities.BoardOfStudies;
+import com.smcc.application.AcademicsActivities.BtechPrograms;
+import com.smcc.application.AcademicsActivities.Examinations;
+import com.smcc.application.AcademicsActivities.MtechPrograms;
+import com.smcc.application.AcademicsActivities.ProfessionalSocieties;
+import com.smcc.application.AcademicsActivities.Research;
 import com.smcc.application.R;
 
 /**

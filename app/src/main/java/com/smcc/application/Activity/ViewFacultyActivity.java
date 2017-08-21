@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,7 +26,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class ViewFacultyActivity extends Activity {
+public class ViewFacultyActivity extends AppCompatActivity {
 
     private String TAG = ViewFacultyActivity.class.getSimpleName();
 
@@ -44,6 +45,8 @@ public class ViewFacultyActivity extends Activity {
         setContentView(R.layout.activity_view_faculty);
 
         list = (ListView) findViewById(R.id.view_list);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         viewprogress = (ProgressBar) findViewById(R.id.viewfaculty_progress);
         viewprogress.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
         new GetContacts().execute();
@@ -138,9 +141,9 @@ public class ViewFacultyActivity extends Activity {
             }
         }
     }
-//    @Override
-//    public void onBackPressed() {
-//        Intent inten = new Intent(ViewFacultyActivity.this,AdminWelcome.class);
-//        startActivity(inten);
-//    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 }

@@ -2,20 +2,19 @@
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="5dp"
+    android:padding="10dp"
     android:background="#fff"
     android:orientation="vertical"
-    tools:context="com.smcc.application.Activity.Examinations"
+    tools:context="com.smcc.application.AcademicsActivities.Examinations"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Examinations"
+        android:text="Examinations :"
         android:textColor="#ac1c1a"
         android:paddingBottom="5dp"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:textStyle="bold" />
 
     <ImageView

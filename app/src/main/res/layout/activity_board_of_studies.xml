@@ -5,17 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#fff"
-    tools:context="com.smcc.application.Activity.BoardOfStudies">
+    android:background="?android:windowBackground"
+    tools:context="com.smcc.application.AcademicsActivities.BoardOfStudies">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:background="#fff">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Board of Studies"
+        android:text="Board of Studies :"
         android:textColor="#ac1c1a"
         android:paddingBottom="5dp"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:textStyle="bold"
         />
 
@@ -33,5 +39,5 @@
         android:textSize="18dp"
         />
 
-
+    </LinearLayout>
 </LinearLayout>

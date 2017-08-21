@@ -106,6 +106,12 @@
             android:textStyle="bold"
             android:padding="10dp"
             android:text="Login"/>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/backbtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/backbtn"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
     </RelativeLayout>

@@ -8,10 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.smcc.application.Activity.CampusSelections;
-import com.smcc.application.Activity.CompaniesVisited;
-import com.smcc.application.Activity.PlacementsContactUs;
-import com.smcc.application.Activity.PlacementsHome;
+import com.smcc.application.PlacementsActivities.CampusSelections;
+import com.smcc.application.PlacementsActivities.CompaniesVisited;
+import com.smcc.application.PlacementsActivities.PlacementsContactUs;
+import com.smcc.application.PlacementsActivities.PlacementsHome;
 import com.smcc.application.R;
 
 public class Placements extends Fragment {

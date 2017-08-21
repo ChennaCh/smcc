@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -23,7 +24,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FacultyViewFeedback extends Activity {
+public class FacultyViewFeedback extends AppCompatActivity {
     private RecyclerView facultyrecyle;
     private FeedBackAdapter facultyfeedBackAdapter;
     ProgressBar facultyviewprogress;
@@ -36,7 +37,8 @@ public class FacultyViewFeedback extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faculty_view_feedback);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         SharedPreferences preferences = getSharedPreferences("facultydetails", MODE_PRIVATE);
         fbranch = preferences.getString("fbranch", null);
 
@@ -105,5 +107,11 @@ public class FacultyViewFeedback extends Activity {
 
         }
     }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
 
 }
