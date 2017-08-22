@@ -37,7 +37,7 @@ public class Admin extends AppCompatActivity {
     int flag = 0;
 
     public EditText inputuname,inputpwd;
-    Button adminLogin,backbtn;
+    Button adminLogin;
     String user,passwrd;
     TextView textView;
 
@@ -52,7 +52,6 @@ public class Admin extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.admin_progress);
         adminLogin=(Button)findViewById(R.id.btn_login);
         textView = (TextView)findViewById(R.id.settext);
-        backbtn=(Button)findViewById(R.id.backbtn);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -68,13 +67,6 @@ public class Admin extends AppCompatActivity {
                 editor.putString("password",pass);
                 editor.commit();
                 new GetContacts1().execute();
-                backbtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent=new Intent(Admin.this,LoginTypes.class);
-                        startActivity(intent);
-                    }
-                });
             }
         });
     }

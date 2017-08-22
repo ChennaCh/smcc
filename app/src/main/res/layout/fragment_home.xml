@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     android:id="@+id/homell"
     tools:context="com.smcc.application.Fragments.Home">
     <LinearLayout
@@ -57,7 +58,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="3"
-            android:background="#e53c38"
+            android:background="@color/white"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -72,8 +73,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#5d8eac"
+                    android:background="@drawable/fragment_home_bg"
                     android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:orientation="vertical"
                     android:padding="5dp">
 
@@ -91,15 +94,18 @@
                         android:text="aboutus"
                         android:textAlignment="center"
                         android:textAllCaps="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="13dp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#6eac5d"
+                    android:background="@drawable/fragment_home_bg"
                     android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:orientation="vertical"
                     android:padding="5dp">
 
@@ -117,7 +123,7 @@
                         android:text="placements"
                         android:textAlignment="center"
                         android:textAllCaps="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="13dp" />
 
                 </LinearLayout>
@@ -134,8 +140,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#c7c25d"
+                    android:background="@drawable/fragment_home_bg"
                     android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:orientation="vertical"
                     android:padding="5dp">
 
@@ -153,7 +161,7 @@
                         android:text="faculties"
                         android:textAlignment="center"
                         android:textAllCaps="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="13dp" />
 
                 </LinearLayout>
@@ -161,7 +169,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#c98457"
+                    android:background="@drawable/fragment_home_bg"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="5dp">
@@ -180,7 +191,7 @@
                         android:text="Feedback"
                         android:textAlignment="center"
                         android:textAllCaps="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="13dp" />
                 </LinearLayout>
 
@@ -197,8 +208,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#6eac5d"
+                    android:background="@drawable/fragment_home_bg"
                     android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:orientation="vertical"
                     android:padding="5dp">
 
@@ -217,7 +230,7 @@
                         android:text="academics"
                         android:textAlignment="center"
                         android:textAllCaps="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="13dp" />
 
                 </LinearLayout>
@@ -225,7 +238,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#5d8eac"
+                    android:background="@drawable/fragment_home_bg"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="5dp">
@@ -244,7 +260,7 @@
                         android:text="contact us"
                         android:textAlignment="center"
                         android:textAllCaps="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="13dp" />
                 </LinearLayout>
 
