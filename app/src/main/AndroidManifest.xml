@@ -18,7 +18,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Activity.StartingActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,120 +28,153 @@
         </activity>
         <activity
             android:name=".UserLogins.LoginTypes"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".UserLogins.Admin"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".UserLogins.Faculty"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.AdminWelcome"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".UserLogins.WelcomeGuest"
             android:label="@string/title_activity_welcome_guest"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".UserLogins.WelcomeFaculty"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AboutUsActivities.Vision"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.AddFacultyActivty"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.ViewFacultyActivity"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.PostNews"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.ChangePassword"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.GuestFeedback"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.ViewFeedBack"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.FacultyDetail"
             android:theme="@style/Theme.AppCompat"
-            android:label="Faculty Details"/>
+            android:label="Faculty Details"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AboutUsActivities.Principal"
             android:label="@string/title_activity_principal"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AboutUsActivities.Management"
             android:label="@string/title_activity_management"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AboutUsActivities.Philosophy"
             android:label="@string/title_activity_philosophy"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AboutUsActivities.AdminHrPolicy"
             android:label="@string/title_activity_admin_hr_policy"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AboutUsActivities.Mou"
             android:label="@string/title_activity_mou"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.FacultyChangePassword"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.FacultyViewFeedback"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.ViewFacultyGuest"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AcademicsActivities.BtechPrograms"
             android:label="@string/title_activity_btech_programs"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AcademicsActivities.MtechPrograms"
             android:label="@string/title_activity_mtech_programs"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AcademicsActivities.BoardOfStudies"
             android:label="@string/title_activity_board_of_studies"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AcademicsActivities.Examinations"
             android:label="@string/title_activity_examinations"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AcademicsActivities.ProfessionalSocieties"
             android:label="@string/title_activity_professional_societies"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".AcademicsActivities.Research"
             android:label="@string/title_activity_research"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PlacementsActivities.PlacementsHome"
             android:label="@string/title_activity_placements_home"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PlacementsActivities.CampusSelections"
             android:label="@string/title_activity_campus_selections"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PlacementsActivities.CompaniesVisited"
             android:label="@string/title_activity_companies_visited"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PlacementsActivities.PlacementsContactUs"
             android:label="@string/title_activity_placements_contact_us"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activity.CollegeMap"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat"
+            android:screenOrientation="portrait"/>
 
         <service android:name=".service.MyFirebaseMessagingService">
             <intent-filter>
