@@ -2,6 +2,7 @@ package com.smcc.application.Fragments;
 
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -9,16 +10,23 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.smcc.application.Activity.GuestFeedback;
 import com.smcc.application.AboutUsActivities.Vision;
 import com.smcc.application.Adapters.SlideimageAdapter;
+import com.smcc.application.HttpHandler;
 import com.smcc.application.R;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -74,6 +82,8 @@ public class Home extends Fragment {
         gscrollText.setSingleLine(true);
         gscrollText.setSelected(true);
         init();
+//        new GetNewsGuest().execute();
+
         aboutus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -142,7 +152,6 @@ public class Home extends Fragment {
 
             }
         });
-       // new GetNewsGuest().execute();
 
         return view;
 
