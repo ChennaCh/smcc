@@ -1,5 +1,6 @@
 package com.smcc.application.UserLogins;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -233,6 +234,22 @@ public class WelcomeGuest extends AppCompatActivity
             Ftransaction.show(hf);
             Ftransaction.commit();
             return true;
+        }
+
+        if(id == R.id.action_share){
+
+            try {
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+                String sAux = "\nLet me recommend you this application\n\n";
+                sAux = sAux + "https://play.google.com/store/apps/details?id=com.whatsapp&hl=en \n";
+                i.putExtra(Intent.EXTRA_TEXT, sAux);
+                startActivity(Intent.createChooser(i, "Choose One"));
+            } catch(Exception e) {
+                e.printStackTrace();
+            }
+
         }
 
         return super.onOptionsItemSelected(item);
