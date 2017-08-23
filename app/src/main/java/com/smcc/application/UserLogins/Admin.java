@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -66,6 +67,7 @@ public class Admin extends AppCompatActivity {
                 editor.putString("username",usernmae);
                 editor.putString("password",pass);
                 editor.commit();
+                Snackbar.make(view, "No network connection.",Snackbar.LENGTH_SHORT).show();
                 new GetContacts1().execute();
             }
         });
