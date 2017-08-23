@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:padding="5dp"
     tools:context="com.smcc.application.AcademicsActivities.BtechPrograms">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,14 +19,22 @@
         android:textStyle="bold"
         />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/block"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/block"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -216,5 +225,6 @@
                 </TableRow>
             </TableLayout>
         </LinearLayout>
+    </LinearLayout>
     </ScrollView>
 </LinearLayout>
