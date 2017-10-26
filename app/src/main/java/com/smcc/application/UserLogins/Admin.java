@@ -71,6 +71,7 @@ public class Admin extends AppCompatActivity {
                 new GetContacts1().execute();
             }
         });
+
     }
 
     private class GetContacts1 extends AsyncTask<Void,Void,Integer> {

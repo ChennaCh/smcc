@@ -40,7 +40,7 @@ public class AdminWelcome extends Activity {
     String username;
     private static int currentPage = 0;
     Button logoutbtn,addfacultybtn,viewfacultybtn,postnews,changepwd,feedback;
-    Integer[] COLLEGE1= {R.drawable.college,R.drawable.auditorium,R.drawable.lib,R.drawable.library};
+    Integer[] COLLEGE1= {R.drawable.smeccollege,R.drawable.smecauditorium,R.drawable.smecblock,R.drawable.smeccorridor};
     //SlideimageAdapter adapter;
     TextView scrollText;
     ArrayList<Integer> COLLEGEArray = new ArrayList<Integer>();

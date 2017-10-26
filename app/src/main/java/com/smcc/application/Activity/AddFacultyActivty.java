@@ -163,8 +163,6 @@ public class AddFacultyActivty extends Activity {
                 nameValuePairs.add(new BasicNameValuePair("qualification", getqualification));
                 nameValuePairs.add(new BasicNameValuePair("gender", gendertype));
                 nameValuePairs.add(new BasicNameValuePair("about", aboutfaculty));
-
-
                 try {
                     HttpClient httpClient = new DefaultHttpClient();
                     HttpPost httpPost = new HttpPost("http://www.fratelloinnotech.com/smec/addfaculty.php");

@@ -46,20 +46,20 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:textColor="#ffffff"/>
 
-    <Button
-        android:id="@+id/guest_cse"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_gravity="center"
-        android:background="@drawable/rec_bgbutton"
-        android:drawablePadding="5dp"
-        android:text="CSE"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="13dp" />
+            <Button
+                android:id="@+id/guest_cse"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rec_bgbutton"
+                android:drawablePadding="5dp"
+                android:text="CSE"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
 
-    <Button
+            <Button
         android:id="@+id/guest_ece"
         android:layout_width="match_parent"
         android:layout_height="55dp"
