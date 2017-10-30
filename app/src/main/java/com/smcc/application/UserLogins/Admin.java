@@ -50,6 +50,8 @@ public class Admin extends AppCompatActivity {
         setContentView(R.layout.activity_admin);
         inputpwd=(EditText)findViewById(R.id.input_password);
         inputuname=(EditText)findViewById(R.id.input_email);
+        user=inputuname.getText().toString();
+        passwrd=inputpwd.getText().toString();
         progressBar = (ProgressBar) findViewById(R.id.admin_progress);
         adminLogin=(Button)findViewById(R.id.btn_login);
         textView = (TextView)findViewById(R.id.settext);
@@ -60,6 +62,16 @@ public class Admin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 textView.setText("");
+                if(user.equals("")){
+
+                    inputuname.setError("Enter valid username");
+                    inputuname.setFocusable(true);
+
+                }else if(passwrd.equals("")) {
+
+                    inputpwd.setError("Enter valid Password");
+                    inputpwd.setFocusable(true);
+                }
                 SharedPreferences preferences = getSharedPreferences("userdetails",MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 String usernmae = inputuname.getText().toString();
@@ -67,7 +79,7 @@ public class Admin extends AppCompatActivity {
                 editor.putString("username",usernmae);
                 editor.putString("password",pass);
                 editor.commit();
-                Snackbar.make(view, "No network connection.",Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(view, "Login Successfully.",Snackbar.LENGTH_SHORT).show();
                 new GetContacts1().execute();
             }
         });

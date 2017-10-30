@@ -5,10 +5,15 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,7 +31,7 @@ import java.util.TimerTask;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class WelcomeFaculty extends Activity {
+public class WelcomeFaculty extends AppCompatActivity {
     ViewPager fviewPager;
     private static int currentPage = 0;
     Button logout,fchangepass,ffeedback;
@@ -42,12 +47,14 @@ public class WelcomeFaculty extends Activity {
 
         fscrollText = (TextView)findViewById(R.id.fscrollText);
         logout = (Button) findViewById(R.id.facu_logout);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.facultytoolbar);
+        //TextView toolbarTextView = (TextView) findViewById(R.id.toolbarTextView);
+        setSupportActionBar(toolbar);
         fscrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         fscrollText.setSingleLine(true);
         fscrollText.setSelected(true);
         fchangepass = (Button) findViewById(R.id.f_changepass);
         ffeedback = (Button) findViewById(R.id.f_feedback);
-
         SharedPreferences preferences = getSharedPreferences("facultydetails",MODE_PRIVATE);
         usernmae1 = preferences.getString("fausername",null);
         fscrollText.setText("Welcome to "+usernmae1.toUpperCase());
@@ -90,6 +97,29 @@ public class WelcomeFaculty extends Activity {
         });
         init();
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.welcome_faculty_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id==R.id.facultyhub){
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            intent.setData(Uri.parse("http://119.235.48.130/smec"));
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
     private void init() {
         for(int i=0;i<COLLEGE.length;i++)

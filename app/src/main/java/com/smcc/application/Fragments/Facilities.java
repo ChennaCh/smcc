@@ -18,8 +18,7 @@ import com.smcc.application.R;
  */
 public class Facilities extends Fragment {
 
-    private Button cse,ece,eee;
-
+    private Button cse,ece;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -27,7 +26,7 @@ public class Facilities extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_facilities, container, false);
         cse = (Button) view.findViewById(R.id.guest_cse);
         ece = (Button) view.findViewById(R.id.guest_ece);
-        eee = (Button) view.findViewById(R.id.guest_eee);
+        //eee = (Button) view.findViewById(R.id.guest_eee);
 
         cse.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,15 +48,15 @@ public class Facilities extends Fragment {
             }
         });
 
-        eee.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String eee1 = "eee";
-                Intent intent = new Intent(getContext(), ViewFacultyGuest.class);
-                intent.putExtra("branch",eee1);
-                startActivity(intent);
-            }
-        });
+//        eee.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                String eee1 = "eee";
+//                Intent intent = new Intent(getContext(), ViewFacultyGuest.class);
+//                intent.putExtra("branch",eee1);
+//                startActivity(intent);
+//            }
+//        });
         return view;
     }
 

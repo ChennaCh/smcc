@@ -17,4 +17,8 @@
         android:orderInCategory="101"
         android:title="@string/action_feedback"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/hub"
+        android:title="Student Hub"
+        app:showAsAction="always" />
 </menu>

@@ -8,7 +8,7 @@
     android:background="?android:windowBackground"
     tools:context="com.smcc.application.AboutUsActivities.AdminHrPolicy">
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/hrpolicytoolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary" />

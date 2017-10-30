@@ -72,7 +72,7 @@
                 android:textColor="#fff"
                 app:backgroundTint="#fff"
                 android:inputType="textEmailAddress"
-                android:hint="Email" />
+                android:hint="Username" />
         </android.support.design.widget.TextInputLayout>
 
         <!-- Password Label -->

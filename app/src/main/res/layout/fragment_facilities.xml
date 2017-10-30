@@ -73,21 +73,7 @@
         android:textColor="@color/white"
         android:textSize="13dp" />
 
-    <Button
-        android:id="@+id/guest_eee"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rec_bgbutton"
-        android:drawablePadding="5dp"
-        android:text="EEE"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="13dp" />
-
-        </LinearLayout>
+            </LinearLayout>
     </RelativeLayout>
 
 </LinearLayout>

@@ -52,7 +52,7 @@ public class AdminWelcome extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_welcome);
         scrollText = (TextView)findViewById(R.id.admin_scrollText);
-       // String datascrolltext= (String)scrollText.getText();
+        //String datascrolltext= scrollText.getText().toString();
         Bundle b = getIntent().getExtras();
         username = b.getString("uname");
 
@@ -124,12 +124,12 @@ public class AdminWelcome extends Activity {
                         .show();
             }
         });
-
-        scrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-        scrollText.setSingleLine(true);
-        scrollText.setSelected(true);
+//        scrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+//        scrollText.setSingleLine(true);
+//        scrollText.setSelected(true);
         init();
-        //new GetNews().execute();
+//        new GetNews().execute();
+
     }
 
     private void init() {

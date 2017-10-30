@@ -1,6 +1,7 @@
 package com.smcc.application.Fragments;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.smcc.application.Activity.GuestFeedback;
 import com.smcc.application.AboutUsActivities.Vision;
 import com.smcc.application.Adapters.SlideimageAdapter;
+import com.smcc.application.Bean.GetFacultyBean;
 import com.smcc.application.HttpHandler;
 import com.smcc.application.R;
 
@@ -55,6 +57,7 @@ public class Home extends Fragment {
     View view;
     private static String getnewsurl2 = "http://www.fratelloinnotech.com/smec/getnews.php";
     private String TAG = Home.class.getSimpleName();
+    private static String getnewsurl = "http://www.fratelloinnotech.com/smec/getnews.php";
 
 
     public Home() {
@@ -66,9 +69,9 @@ public class Home extends Fragment {
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         view = inflater.inflate(R.layout.fragment_home, container, false);
-        gscrollText = (TextView)view.findViewById(R.id.hscrollText);
+        gscrollText = (TextView)view.findViewById(R.id.guest_scrollText);
+        gscrollText.setText("welcome to guest");
         aboutus=(Button)view.findViewById(R.id.aboutus);
         facilities=(Button)view.findViewById(R.id.facilities);
         acadamics=(Button)view.findViewById(R.id.academics);
@@ -77,12 +80,7 @@ public class Home extends Fragment {
         placements=(Button)view.findViewById(R.id.placements);
 
 
-        //String datascrolltext= (String)gscrollText.getText();
-        gscrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-        gscrollText.setSingleLine(true);
-        gscrollText.setSelected(true);
-        init();
-//        new GetNewsGuest().execute();
+
 
         aboutus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,6 +150,11 @@ public class Home extends Fragment {
 
             }
         });
+        gscrollText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        gscrollText.setSingleLine(true);
+        gscrollText.setSelected(true);
+       init();
+       new GetNews(getActivity()).execute();
 
         return view;
 
@@ -187,50 +190,49 @@ public class Home extends Fragment {
         handler.post(Update);
     }
 
-//    private class GetNewsGuest extends AsyncTask<Void,Void,Void> {
-//
-//        @Override
-//        protected Void doInBackground(Void... voids) {
-//            HttpHandler sh = new HttpHandler();
-//
-//            // Making a request to url and getting response
-//            String jsonStr = sh.makeServiceCall(getnewsurl2);
-//            Log.e(TAG, "Response from url: " + jsonStr);
-//
-//            if (jsonStr != null) {
-//                try {
-//                    JSONObject jsonObj = new JSONObject(jsonStr);
-//                    JSONArray contacts = jsonObj.getJSONArray("result");
-//                    String allnews="";
-//                    for (int i = 0; i < contacts.length(); i++) {
-//                        JSONObject c = contacts.getJSONObject(i);
-//                        String id = c.getString("id");
-//                        String news = c.getString("news");
-//                        String date1value = c.getString("pdate");
-//                        allnews+=news;
-//
-//
-//                    }
-//                    try {
-//                        gscrollText.setText(allnews);
-//                    }catch (Exception e){
-//                        e.printStackTrace();
-//                    }
-//                } catch (final JSONException e) {
-//                    Log.e(TAG, "Json parsing error: " + e.getMessage());
-//                    getActivity().runOnUiThread(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            Toast.makeText(getActivity(), "Json parsing error: " + e.getMessage(), Toast.LENGTH_LONG).show();
-//                        }
-//                    });
-//                }
-//            } else {
-//                Toast.makeText(getActivity(), "Couldn't get json from server", Toast.LENGTH_SHORT).show();
-//            }
-//
-//            return null;
-//        }
-//    }
+    private class GetNews extends AsyncTask<Void,Void,ArrayList<String>> {
+        Activity mContex;
+        String news="";
+        public GetNews( Activity mContex)
+        {
+            this.mContex = mContex;
+        }
+        @Override
+        protected ArrayList<String> doInBackground(Void... voids) {
+            HttpHandler sh = new HttpHandler();
+            ArrayList<String> list = new ArrayList<>();
+            // Making a request to url and getting response
+            String jsonStr = sh.makeServiceCall(getnewsurl);
+            Log.e(TAG, "Response from url: " + jsonStr);
 
+            if (jsonStr != null) {
+
+                try {
+                    JSONObject jsonObj = new JSONObject(jsonStr);
+                    JSONArray contacts = jsonObj.getJSONArray("result");
+
+                    for (int i = 0; i < contacts.length(); i++) {
+                        JSONObject c = contacts.getJSONObject(i);
+                       // String id = c.getString("id");
+                       news += c.getString("news")+" - "+c.getString("pdate")+"  ******  ";
+                    }
+                    mContex.runOnUiThread(new Runnable() {
+
+                        public void run() {
+                            gscrollText.setText(news);
+                            // Toast.makeText(mContex, "Example for Toast", Toast.LENGTH_SHORT).show();
+
+                        }
+                    });
+                } catch (final JSONException e) {
+                    Log.e(TAG, "Json parsing error: " + e.getMessage());
+
+                }
+            } else {
+                Toast.makeText(getActivity(), "Couldn't get json from server", Toast.LENGTH_SHORT).show();
+            }
+
+            return null;
+        }
+    }
 }

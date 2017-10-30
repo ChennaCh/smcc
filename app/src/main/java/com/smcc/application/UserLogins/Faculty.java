@@ -3,11 +3,15 @@ package com.smcc.application.UserLogins;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +34,7 @@ public class Faculty extends AppCompatActivity {
     private Button facultylogin;
     private TextView faculty_status;
     private int flag = 0;
+    String fusername,fpwd;
     private ProgressBar faculty_proress;
 
     String user,passwrd,fbranch;
@@ -41,21 +46,39 @@ public class Faculty extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faculty);
+
         finputuname = (EditText) findViewById(R.id.faculty_email);
         finputpwd = (EditText) findViewById(R.id.faculty_password) ;
         facultylogin=(Button)findViewById(R.id.faculty_login);
         faculty_status = (TextView) findViewById(R.id.faculty_settext);
+
         faculty_proress = (ProgressBar) findViewById(R.id.faculty_progress);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         facultylogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                faculty_status.setText("");
-                new FacultyGetContacts().execute();
+                fusername=finputuname.getText().toString();
+                fpwd=finputpwd.getText().toString();
+
+                if(fusername.equals("")){
+
+                    finputuname.setError("Enter valid username");
+                    finputuname.setFocusable(true);
+
+                }else if(fpwd.equals("")) {
+
+                    finputpwd.setError("Enter valid Password");
+                    finputpwd.setFocusable(true);
+                }
+                  else {//faculty_status.setText("");
+                    new FacultyGetContacts().execute();
+                }
+
             }
         });
     }
+
 
     private class FacultyGetContacts extends AsyncTask<Void,Void,Integer> {
 

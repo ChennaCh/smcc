@@ -2,6 +2,7 @@ package com.smcc.application.UserLogins;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -74,7 +75,7 @@ public class WelcomeGuest extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_guest);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.guesttoolbar);
         setSupportActionBar(toolbar);
         mHandler = new Handler();
         TextView tv=(TextView)findViewById(R.id.tv1);
@@ -98,7 +99,6 @@ public class WelcomeGuest extends AppCompatActivity
             loadHomeFragment();
         }
       // initializing navigation menu
-      //  setUpNavigationView();
         fragment = new Home();
         hf = (Home) fragment;
         fragmentManager = getSupportFragmentManager();
@@ -250,6 +250,13 @@ public class WelcomeGuest extends AppCompatActivity
                 e.printStackTrace();
             }
 
+        }
+        if (id==R.id.hub){
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            intent.setData(Uri.parse("http://119.235.48.130/results/student_corner_index.php"));
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

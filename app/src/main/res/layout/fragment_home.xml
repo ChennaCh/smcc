@@ -26,25 +26,23 @@
                 android:layout_alignBottom="@+id/hviewpager"/>
         </RelativeLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <TextView
-            android:id="@+id/hscrollText"
+            android:id="@+id/guest_scrollText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:layout_marginTop="5dp"
             android:background="#e53c38"
-            android:ellipsize="marquee"
-            android:fadingEdge="horizontal"
-            android:lines="1"
-            android:textColor="#fff"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:maxLines="1"
             android:padding="4dp"
-            android:layout_marginBottom="5dp"
-            android:scrollHorizontally="true" />
+            android:text="*** Welcome to SMEC Admin ***"
+            android:textAlignment="center"
+            android:textColor="#fff" />
     </LinearLayout>
 
     <ScrollView

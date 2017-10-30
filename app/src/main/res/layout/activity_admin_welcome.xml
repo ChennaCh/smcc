@@ -48,16 +48,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="#e53c38"
-            android:ellipsize="marquee"
-            android:fadingEdge="horizontal"
-            android:lines="1"
             android:textColor="#fff"
             android:text="*** Welcome to SMEC Admin ***"
-            android:marqueeRepeatLimit="marquee_forever"
             android:textAlignment="center"
             android:padding="4dp"
             android:layout_marginBottom="5dp"
-            android:scrollHorizontally="true"
             />
     </LinearLayout>
 
