@@ -15,15 +15,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <pl.droidsonroids.gif.GifImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/gifimage"
-            android:scaleType="centerCrop"
-            android:background="@null"
-            android:alpha="0.7"
-            android:src="@drawable/collegegif"
-            />
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/gifimage"
+                android:scaleType="centerCrop"
+                android:background="@null"
+                android:alpha="0.7"
+                android:src="@drawable/collegegif"
+                />
         </LinearLayout>
 
 
@@ -37,43 +37,95 @@
             android:layout_marginRight="40dp">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Select the Department"
-        android:textAlignment="center"
-        android:layout_marginBottom="30dp"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:textColor="#ffffff"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Facilities:"
+                android:textAlignment="center"
+                android:layout_marginBottom="30dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="#ffffff"/>
 
             <Button
-                android:id="@+id/guest_cse"
+                android:id="@+id/guest_aud"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_gravity="center"
                 android:background="@drawable/rec_bgbutton"
                 android:drawablePadding="5dp"
-                android:text="CSE"
+                android:text="Auditorium and Seminar Hall"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="13dp" />
 
             <Button
-        android:id="@+id/guest_ece"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rec_bgbutton"
-        android:drawablePadding="5dp"
-        android:text="ECE"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="13dp" />
+                android:id="@+id/guest_lib"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rec_bgbutton"
+                android:drawablePadding="5dp"
+                android:text="Library"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+            <Button
+                android:id="@+id/guest_can"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rec_bgbutton"
+                android:drawablePadding="5dp"
+                android:text="Canteen"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+            <Button
+                android:id="@+id/guest_atm"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rec_bgbutton"
+                android:drawablePadding="5dp"
+                android:text="ATM"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+            <Button
+                android:id="@+id/guest_trans"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rec_bgbutton"
+                android:drawablePadding="5dp"
+                android:text="Transport"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+            <Button
+                android:id="@+id/guest_games"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rec_bgbutton"
+                android:drawablePadding="5dp"
+                android:text="Indoor and Outdoor Games"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
 
-            </LinearLayout>
+        </LinearLayout>
     </RelativeLayout>
 
 </LinearLayout>
